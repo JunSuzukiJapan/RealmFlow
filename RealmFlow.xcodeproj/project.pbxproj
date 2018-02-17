@@ -29,6 +29,94 @@
 		A1D1F0F9203818C100C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F7203818C100C1A3FA /* RealmSwift.framework */; };
 		A1D1F0FC203818D300C1A3FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0FA203818D300C1A3FA /* Realm.framework */; };
 		A1D1F0FD203818D300C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0FB203818D300C1A3FA /* RealmSwift.framework */; };
+		A1D1F1462038243E00C1A3FA /* RealmFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F13D2038243E00C1A3FA /* RealmFlow.framework */; };
+		A1D1F1622038246400C1A3FA /* RealmFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F1592038246400C1A3FA /* RealmFlow.framework */; };
+		A1D1F17E2038247E00C1A3FA /* RealmFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F1752038247E00C1A3FA /* RealmFlow.framework */; };
+		A1D1F1992038253600C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
+		A1D1F19A2038253600C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
+		A1D1F19B2038253600C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
+		A1D1F19C2038253600C1A3FA /* Realm+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA572038134D00291896 /* Realm+Util.swift */; };
+		A1D1F19D2038253600C1A3FA /* RealmFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA532038134D00291896 /* RealmFlow.swift */; };
+		A1D1F19E2038253600C1A3FA /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
+		A1D1F19F2038253600C1A3FA /* RealmFlow+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA512038134D00291896 /* RealmFlow+Delete.swift */; };
+		A1D1F1A02038253600C1A3FA /* RealmFlow+ReadOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA562038134D00291896 /* RealmFlow+ReadOnly.swift */; };
+		A1D1F1A12038253600C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
+		A1D1F1A22038253600C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
+		A1D1F1A32038253600C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
+		A1D1F1A42038255700C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
+		A1D1F1A52038255700C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
+		A1D1F1A62038255700C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
+		A1D1F1A72038255700C1A3FA /* Realm+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA572038134D00291896 /* Realm+Util.swift */; };
+		A1D1F1A82038255700C1A3FA /* RealmFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA532038134D00291896 /* RealmFlow.swift */; };
+		A1D1F1A92038255700C1A3FA /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
+		A1D1F1AA2038255700C1A3FA /* RealmFlow+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA512038134D00291896 /* RealmFlow+Delete.swift */; };
+		A1D1F1AB2038255700C1A3FA /* RealmFlow+ReadOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA562038134D00291896 /* RealmFlow+ReadOnly.swift */; };
+		A1D1F1AC2038255700C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
+		A1D1F1AD2038255700C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
+		A1D1F1AE2038255700C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
+		A1D1F1AF2038257200C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
+		A1D1F1B02038257200C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
+		A1D1F1B12038257200C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
+		A1D1F1B22038257200C1A3FA /* Realm+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA572038134D00291896 /* Realm+Util.swift */; };
+		A1D1F1B32038257200C1A3FA /* RealmFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA532038134D00291896 /* RealmFlow.swift */; };
+		A1D1F1B42038257200C1A3FA /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
+		A1D1F1B52038257200C1A3FA /* RealmFlow+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA512038134D00291896 /* RealmFlow+Delete.swift */; };
+		A1D1F1B62038257200C1A3FA /* RealmFlow+ReadOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA562038134D00291896 /* RealmFlow+ReadOnly.swift */; };
+		A1D1F1B72038257200C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
+		A1D1F1B82038257200C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
+		A1D1F1B92038257200C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
+		A1D1F1BA2038257F00C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
+		A1D1F1BB2038257F00C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
+		A1D1F1BC2038257F00C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
+		A1D1F1BD2038257F00C1A3FA /* Realm+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA572038134D00291896 /* Realm+Util.swift */; };
+		A1D1F1BE2038257F00C1A3FA /* RealmFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA532038134D00291896 /* RealmFlow.swift */; };
+		A1D1F1BF2038257F00C1A3FA /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
+		A1D1F1C02038257F00C1A3FA /* RealmFlow+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA512038134D00291896 /* RealmFlow+Delete.swift */; };
+		A1D1F1C12038257F00C1A3FA /* RealmFlow+ReadOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA562038134D00291896 /* RealmFlow+ReadOnly.swift */; };
+		A1D1F1C22038257F00C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
+		A1D1F1C32038257F00C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
+		A1D1F1C42038257F00C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
+		A1D1F1C52038258B00C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
+		A1D1F1C62038258B00C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
+		A1D1F1C72038258B00C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
+		A1D1F1C82038258B00C1A3FA /* Realm+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA572038134D00291896 /* Realm+Util.swift */; };
+		A1D1F1C92038258B00C1A3FA /* RealmFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA532038134D00291896 /* RealmFlow.swift */; };
+		A1D1F1CA2038258B00C1A3FA /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
+		A1D1F1CB2038258B00C1A3FA /* RealmFlow+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA512038134D00291896 /* RealmFlow+Delete.swift */; };
+		A1D1F1CC2038258B00C1A3FA /* RealmFlow+ReadOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA562038134D00291896 /* RealmFlow+ReadOnly.swift */; };
+		A1D1F1CD2038258B00C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
+		A1D1F1CE2038258B00C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
+		A1D1F1CF2038258B00C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
+		A1D1F1D02038259700C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
+		A1D1F1D12038259700C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
+		A1D1F1D22038259700C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
+		A1D1F1D32038259700C1A3FA /* Realm+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA572038134D00291896 /* Realm+Util.swift */; };
+		A1D1F1D42038259700C1A3FA /* RealmFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA532038134D00291896 /* RealmFlow.swift */; };
+		A1D1F1D52038259700C1A3FA /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
+		A1D1F1D62038259700C1A3FA /* RealmFlow+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA512038134D00291896 /* RealmFlow+Delete.swift */; };
+		A1D1F1D72038259700C1A3FA /* RealmFlow+ReadOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA562038134D00291896 /* RealmFlow+ReadOnly.swift */; };
+		A1D1F1D82038259700C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
+		A1D1F1D92038259700C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
+		A1D1F1DA2038259700C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
+		A1D1F1DB203825A200C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
+		A1D1F1DC203825A200C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
+		A1D1F1DD203825A200C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
+		A1D1F1DE203825A200C1A3FA /* Realm+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA572038134D00291896 /* Realm+Util.swift */; };
+		A1D1F1DF203825A200C1A3FA /* RealmFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA532038134D00291896 /* RealmFlow.swift */; };
+		A1D1F1E0203825A200C1A3FA /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
+		A1D1F1E1203825A200C1A3FA /* RealmFlow+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA512038134D00291896 /* RealmFlow+Delete.swift */; };
+		A1D1F1E2203825A200C1A3FA /* RealmFlow+ReadOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA562038134D00291896 /* RealmFlow+ReadOnly.swift */; };
+		A1D1F1E3203825A200C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
+		A1D1F1E4203825A200C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
+		A1D1F1E5203825A200C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
+		A1D1F1E62038277000C1A3FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EF2038153C00C1A3FA /* Realm.framework */; };
+		A1D1F1E72038277000C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EE2038153C00C1A3FA /* RealmSwift.framework */; };
+		A1D1F1E82038278F00C1A3FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F32038187700C1A3FA /* Realm.framework */; };
+		A1D1F1E92038278F00C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F22038187700C1A3FA /* RealmSwift.framework */; };
+		A1D1F1EA203827B000C1A3FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F6203818C100C1A3FA /* Realm.framework */; };
+		A1D1F1EB203827B000C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F7203818C100C1A3FA /* RealmSwift.framework */; };
+		A1D1F1EE203827FA00C1A3FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0FA203818D300C1A3FA /* Realm.framework */; };
+		A1D1F1EF203827FA00C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0FB203818D300C1A3FA /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +126,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = A106DA35203811DD00291896;
 			remoteInfo = RealmFlow;
+		};
+		A1D1F1472038243E00C1A3FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A106DA2D203811DD00291896 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1D1F13C2038243E00C1A3FA;
+			remoteInfo = "RealmFlow iOS";
+		};
+		A1D1F1632038246400C1A3FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A106DA2D203811DD00291896 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1D1F1582038246400C1A3FA;
+			remoteInfo = "RealmFlow macOS";
+		};
+		A1D1F17F2038247E00C1A3FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A106DA2D203811DD00291896 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1D1F1742038247E00C1A3FA;
+			remoteInfo = "RealmFlow tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -67,6 +176,13 @@
 		A1D1F0F7203818C100C1A3FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/tvOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
 		A1D1F0FA203818D300C1A3FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/watchOS/Realm.framework; sourceTree = SOURCE_ROOT; };
 		A1D1F0FB203818D300C1A3FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/watchOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
+		A1D1F13D2038243E00C1A3FA /* RealmFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D1F1452038243E00C1A3FA /* RealmFlow iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RealmFlow iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D1F1592038246400C1A3FA /* RealmFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D1F1612038246400C1A3FA /* RealmFlow macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RealmFlow macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D1F1752038247E00C1A3FA /* RealmFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D1F17D2038247E00C1A3FA /* RealmFlow tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RealmFlow tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D1F1912038249600C1A3FA /* RealmFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +209,66 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1D1F1392038243E00C1A3FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1E62038277000C1A3FA /* Realm.framework in Frameworks */,
+				A1D1F1E72038277000C1A3FA /* RealmSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1422038243E00C1A3FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1462038243E00C1A3FA /* RealmFlow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1552038246400C1A3FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1E82038278F00C1A3FA /* Realm.framework in Frameworks */,
+				A1D1F1E92038278F00C1A3FA /* RealmSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F15E2038246400C1A3FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1622038246400C1A3FA /* RealmFlow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1712038247E00C1A3FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1EA203827B000C1A3FA /* Realm.framework in Frameworks */,
+				A1D1F1EB203827B000C1A3FA /* RealmSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F17A2038247E00C1A3FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F17E2038247E00C1A3FA /* RealmFlow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F18D2038249600C1A3FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1EE203827FA00C1A3FA /* Realm.framework in Frameworks */,
+				A1D1F1EF203827FA00C1A3FA /* RealmSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -111,6 +287,13 @@
 			children = (
 				A106DA36203811DD00291896 /* RealmFlow.framework */,
 				A106DA3F203811DD00291896 /* RealmFlowTests.xctest */,
+				A1D1F13D2038243E00C1A3FA /* RealmFlow.framework */,
+				A1D1F1452038243E00C1A3FA /* RealmFlow iOSTests.xctest */,
+				A1D1F1592038246400C1A3FA /* RealmFlow.framework */,
+				A1D1F1612038246400C1A3FA /* RealmFlow macOSTests.xctest */,
+				A1D1F1752038247E00C1A3FA /* RealmFlow.framework */,
+				A1D1F17D2038247E00C1A3FA /* RealmFlow tvOSTests.xctest */,
+				A1D1F1912038249600C1A3FA /* RealmFlow.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +353,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1D1F13A2038243E00C1A3FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1562038246400C1A3FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1722038247E00C1A3FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F18E2038249600C1A3FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -209,6 +420,132 @@
 			productReference = A106DA3F203811DD00291896 /* RealmFlowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A1D1F13C2038243E00C1A3FA /* RealmFlow iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1D1F14E2038243E00C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow iOS" */;
+			buildPhases = (
+				A1D1F1382038243E00C1A3FA /* Sources */,
+				A1D1F1392038243E00C1A3FA /* Frameworks */,
+				A1D1F13A2038243E00C1A3FA /* Headers */,
+				A1D1F13B2038243E00C1A3FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RealmFlow iOS";
+			productName = "RealmFlow iOS";
+			productReference = A1D1F13D2038243E00C1A3FA /* RealmFlow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A1D1F1442038243E00C1A3FA /* RealmFlow iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1D1F1512038243E00C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow iOSTests" */;
+			buildPhases = (
+				A1D1F1412038243E00C1A3FA /* Sources */,
+				A1D1F1422038243E00C1A3FA /* Frameworks */,
+				A1D1F1432038243E00C1A3FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1D1F1482038243E00C1A3FA /* PBXTargetDependency */,
+			);
+			name = "RealmFlow iOSTests";
+			productName = "RealmFlow iOSTests";
+			productReference = A1D1F1452038243E00C1A3FA /* RealmFlow iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A1D1F1582038246400C1A3FA /* RealmFlow macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1D1F16A2038246400C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow macOS" */;
+			buildPhases = (
+				A1D1F1542038246400C1A3FA /* Sources */,
+				A1D1F1552038246400C1A3FA /* Frameworks */,
+				A1D1F1562038246400C1A3FA /* Headers */,
+				A1D1F1572038246400C1A3FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RealmFlow macOS";
+			productName = "RealmFlow macOS";
+			productReference = A1D1F1592038246400C1A3FA /* RealmFlow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A1D1F1602038246400C1A3FA /* RealmFlow macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1D1F16D2038246400C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow macOSTests" */;
+			buildPhases = (
+				A1D1F15D2038246400C1A3FA /* Sources */,
+				A1D1F15E2038246400C1A3FA /* Frameworks */,
+				A1D1F15F2038246400C1A3FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1D1F1642038246400C1A3FA /* PBXTargetDependency */,
+			);
+			name = "RealmFlow macOSTests";
+			productName = "RealmFlow macOSTests";
+			productReference = A1D1F1612038246400C1A3FA /* RealmFlow macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A1D1F1742038247E00C1A3FA /* RealmFlow tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1D1F1862038247E00C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow tvOS" */;
+			buildPhases = (
+				A1D1F1702038247E00C1A3FA /* Sources */,
+				A1D1F1712038247E00C1A3FA /* Frameworks */,
+				A1D1F1722038247E00C1A3FA /* Headers */,
+				A1D1F1732038247E00C1A3FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RealmFlow tvOS";
+			productName = "RealmFlow tvOS";
+			productReference = A1D1F1752038247E00C1A3FA /* RealmFlow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A1D1F17C2038247E00C1A3FA /* RealmFlow tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1D1F1892038247E00C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow tvOSTests" */;
+			buildPhases = (
+				A1D1F1792038247E00C1A3FA /* Sources */,
+				A1D1F17A2038247E00C1A3FA /* Frameworks */,
+				A1D1F17B2038247E00C1A3FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1D1F1802038247E00C1A3FA /* PBXTargetDependency */,
+			);
+			name = "RealmFlow tvOSTests";
+			productName = "RealmFlow tvOSTests";
+			productReference = A1D1F17D2038247E00C1A3FA /* RealmFlow tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A1D1F1902038249600C1A3FA /* RealmFlow watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1D1F1962038249600C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow watchOS" */;
+			buildPhases = (
+				A1D1F18C2038249600C1A3FA /* Sources */,
+				A1D1F18D2038249600C1A3FA /* Frameworks */,
+				A1D1F18E2038249600C1A3FA /* Headers */,
+				A1D1F18F2038249600C1A3FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RealmFlow watchOS";
+			productName = "RealmFlow watchOS";
+			productReference = A1D1F1912038249600C1A3FA /* RealmFlow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -228,6 +565,34 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					A1D1F13C2038243E00C1A3FA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A1D1F1442038243E00C1A3FA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A1D1F1582038246400C1A3FA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A1D1F1602038246400C1A3FA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A1D1F1742038247E00C1A3FA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A1D1F17C2038247E00C1A3FA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A1D1F1902038249600C1A3FA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A106DA30203811DD00291896 /* Build configuration list for PBXProject "RealmFlow" */;
@@ -244,6 +609,13 @@
 			targets = (
 				A106DA35203811DD00291896 /* RealmFlow */,
 				A106DA3E203811DD00291896 /* RealmFlowTests */,
+				A1D1F13C2038243E00C1A3FA /* RealmFlow iOS */,
+				A1D1F1442038243E00C1A3FA /* RealmFlow iOSTests */,
+				A1D1F1582038246400C1A3FA /* RealmFlow macOS */,
+				A1D1F1602038246400C1A3FA /* RealmFlow macOSTests */,
+				A1D1F1742038247E00C1A3FA /* RealmFlow tvOS */,
+				A1D1F17C2038247E00C1A3FA /* RealmFlow tvOSTests */,
+				A1D1F1902038249600C1A3FA /* RealmFlow watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +629,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A106DA3D203811DD00291896 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F13B2038243E00C1A3FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1432038243E00C1A3FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1572038246400C1A3FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F15F2038246400C1A3FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1732038247E00C1A3FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F17B2038247E00C1A3FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F18F2038249600C1A3FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,6 +713,132 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1D1F1382038243E00C1A3FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1992038253600C1A3FA /* RawOrWrap.swift in Sources */,
+				A1D1F19A2038253600C1A3FA /* ReadWrite.swift in Sources */,
+				A1D1F19B2038253600C1A3FA /* Realm+Run.swift in Sources */,
+				A1D1F19C2038253600C1A3FA /* Realm+Util.swift in Sources */,
+				A1D1F19D2038253600C1A3FA /* RealmFlow.swift in Sources */,
+				A1D1F19E2038253600C1A3FA /* RealmFlow+Add.swift in Sources */,
+				A1D1F19F2038253600C1A3FA /* RealmFlow+Delete.swift in Sources */,
+				A1D1F1A02038253600C1A3FA /* RealmFlow+ReadOnly.swift in Sources */,
+				A1D1F1A12038253600C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
+				A1D1F1A22038253600C1A3FA /* RealmFlow+Static.swift in Sources */,
+				A1D1F1A32038253600C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1412038243E00C1A3FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1A42038255700C1A3FA /* RawOrWrap.swift in Sources */,
+				A1D1F1A52038255700C1A3FA /* ReadWrite.swift in Sources */,
+				A1D1F1A62038255700C1A3FA /* Realm+Run.swift in Sources */,
+				A1D1F1A72038255700C1A3FA /* Realm+Util.swift in Sources */,
+				A1D1F1A82038255700C1A3FA /* RealmFlow.swift in Sources */,
+				A1D1F1A92038255700C1A3FA /* RealmFlow+Add.swift in Sources */,
+				A1D1F1AA2038255700C1A3FA /* RealmFlow+Delete.swift in Sources */,
+				A1D1F1AB2038255700C1A3FA /* RealmFlow+ReadOnly.swift in Sources */,
+				A1D1F1AC2038255700C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
+				A1D1F1AD2038255700C1A3FA /* RealmFlow+Static.swift in Sources */,
+				A1D1F1AE2038255700C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1542038246400C1A3FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1AF2038257200C1A3FA /* RawOrWrap.swift in Sources */,
+				A1D1F1B02038257200C1A3FA /* ReadWrite.swift in Sources */,
+				A1D1F1B12038257200C1A3FA /* Realm+Run.swift in Sources */,
+				A1D1F1B22038257200C1A3FA /* Realm+Util.swift in Sources */,
+				A1D1F1B32038257200C1A3FA /* RealmFlow.swift in Sources */,
+				A1D1F1B42038257200C1A3FA /* RealmFlow+Add.swift in Sources */,
+				A1D1F1B52038257200C1A3FA /* RealmFlow+Delete.swift in Sources */,
+				A1D1F1B62038257200C1A3FA /* RealmFlow+ReadOnly.swift in Sources */,
+				A1D1F1B72038257200C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
+				A1D1F1B82038257200C1A3FA /* RealmFlow+Static.swift in Sources */,
+				A1D1F1B92038257200C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F15D2038246400C1A3FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1BA2038257F00C1A3FA /* RawOrWrap.swift in Sources */,
+				A1D1F1BB2038257F00C1A3FA /* ReadWrite.swift in Sources */,
+				A1D1F1BC2038257F00C1A3FA /* Realm+Run.swift in Sources */,
+				A1D1F1BD2038257F00C1A3FA /* Realm+Util.swift in Sources */,
+				A1D1F1BE2038257F00C1A3FA /* RealmFlow.swift in Sources */,
+				A1D1F1BF2038257F00C1A3FA /* RealmFlow+Add.swift in Sources */,
+				A1D1F1C02038257F00C1A3FA /* RealmFlow+Delete.swift in Sources */,
+				A1D1F1C12038257F00C1A3FA /* RealmFlow+ReadOnly.swift in Sources */,
+				A1D1F1C22038257F00C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
+				A1D1F1C32038257F00C1A3FA /* RealmFlow+Static.swift in Sources */,
+				A1D1F1C42038257F00C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1702038247E00C1A3FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1C52038258B00C1A3FA /* RawOrWrap.swift in Sources */,
+				A1D1F1C62038258B00C1A3FA /* ReadWrite.swift in Sources */,
+				A1D1F1C72038258B00C1A3FA /* Realm+Run.swift in Sources */,
+				A1D1F1C82038258B00C1A3FA /* Realm+Util.swift in Sources */,
+				A1D1F1C92038258B00C1A3FA /* RealmFlow.swift in Sources */,
+				A1D1F1CA2038258B00C1A3FA /* RealmFlow+Add.swift in Sources */,
+				A1D1F1CB2038258B00C1A3FA /* RealmFlow+Delete.swift in Sources */,
+				A1D1F1CC2038258B00C1A3FA /* RealmFlow+ReadOnly.swift in Sources */,
+				A1D1F1CD2038258B00C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
+				A1D1F1CE2038258B00C1A3FA /* RealmFlow+Static.swift in Sources */,
+				A1D1F1CF2038258B00C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F1792038247E00C1A3FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1D02038259700C1A3FA /* RawOrWrap.swift in Sources */,
+				A1D1F1D12038259700C1A3FA /* ReadWrite.swift in Sources */,
+				A1D1F1D22038259700C1A3FA /* Realm+Run.swift in Sources */,
+				A1D1F1D32038259700C1A3FA /* Realm+Util.swift in Sources */,
+				A1D1F1D42038259700C1A3FA /* RealmFlow.swift in Sources */,
+				A1D1F1D52038259700C1A3FA /* RealmFlow+Add.swift in Sources */,
+				A1D1F1D62038259700C1A3FA /* RealmFlow+Delete.swift in Sources */,
+				A1D1F1D72038259700C1A3FA /* RealmFlow+ReadOnly.swift in Sources */,
+				A1D1F1D82038259700C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
+				A1D1F1D92038259700C1A3FA /* RealmFlow+Static.swift in Sources */,
+				A1D1F1DA2038259700C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1D1F18C2038249600C1A3FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D1F1DB203825A200C1A3FA /* RawOrWrap.swift in Sources */,
+				A1D1F1DC203825A200C1A3FA /* ReadWrite.swift in Sources */,
+				A1D1F1DD203825A200C1A3FA /* Realm+Run.swift in Sources */,
+				A1D1F1DE203825A200C1A3FA /* Realm+Util.swift in Sources */,
+				A1D1F1DF203825A200C1A3FA /* RealmFlow.swift in Sources */,
+				A1D1F1E0203825A200C1A3FA /* RealmFlow+Add.swift in Sources */,
+				A1D1F1E1203825A200C1A3FA /* RealmFlow+Delete.swift in Sources */,
+				A1D1F1E2203825A200C1A3FA /* RealmFlow+ReadOnly.swift in Sources */,
+				A1D1F1E3203825A200C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
+				A1D1F1E4203825A200C1A3FA /* RealmFlow+Static.swift in Sources */,
+				A1D1F1E5203825A200C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -299,6 +846,21 @@
 			isa = PBXTargetDependency;
 			target = A106DA35203811DD00291896 /* RealmFlow */;
 			targetProxy = A106DA41203811DD00291896 /* PBXContainerItemProxy */;
+		};
+		A1D1F1482038243E00C1A3FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1D1F13C2038243E00C1A3FA /* RealmFlow iOS */;
+			targetProxy = A1D1F1472038243E00C1A3FA /* PBXContainerItemProxy */;
+		};
+		A1D1F1642038246400C1A3FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1D1F1582038246400C1A3FA /* RealmFlow macOS */;
+			targetProxy = A1D1F1632038246400C1A3FA /* PBXContainerItemProxy */;
+		};
+		A1D1F1802038247E00C1A3FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1D1F1742038247E00C1A3FA /* RealmFlow tvOS */;
+			targetProxy = A1D1F17F2038247E00C1A3FA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -511,6 +1073,320 @@
 			};
 			name = Release;
 		};
+		A1D1F14F2038243E00C1A3FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = RealmFlow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-iOS";
+				PRODUCT_NAME = RealmFlow;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1D1F1502038243E00C1A3FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = RealmFlow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-iOS";
+				PRODUCT_NAME = RealmFlow;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1D1F1522038243E00C1A3FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				INFOPLIST_FILE = RealmFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1D1F1532038243E00C1A3FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				INFOPLIST_FILE = RealmFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1D1F16B2038246400C1A3FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = RealmFlow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-macOS";
+				PRODUCT_NAME = RealmFlow;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		A1D1F16C2038246400C1A3FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = RealmFlow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-macOS";
+				PRODUCT_NAME = RealmFlow;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		A1D1F16E2038246400C1A3FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				INFOPLIST_FILE = RealmFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		A1D1F16F2038246400C1A3FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				INFOPLIST_FILE = RealmFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		A1D1F1872038247E00C1A3FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = RealmFlow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-tvOS";
+				PRODUCT_NAME = RealmFlow;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		A1D1F1882038247E00C1A3FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = RealmFlow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-tvOS";
+				PRODUCT_NAME = RealmFlow;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		A1D1F18A2038247E00C1A3FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				INFOPLIST_FILE = RealmFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		A1D1F18B2038247E00C1A3FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				INFOPLIST_FILE = RealmFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		A1D1F1972038249600C1A3FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = RealmFlow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-watchOS";
+				PRODUCT_NAME = RealmFlow;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		A1D1F1982038249600C1A3FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5JJA3VPYD7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = RealmFlow/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-watchOS";
+				PRODUCT_NAME = RealmFlow;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -537,6 +1413,69 @@
 			buildConfigurations = (
 				A106DA4E203811DD00291896 /* Debug */,
 				A106DA4F203811DD00291896 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1D1F14E2038243E00C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1D1F14F2038243E00C1A3FA /* Debug */,
+				A1D1F1502038243E00C1A3FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1D1F1512038243E00C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1D1F1522038243E00C1A3FA /* Debug */,
+				A1D1F1532038243E00C1A3FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1D1F16A2038246400C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1D1F16B2038246400C1A3FA /* Debug */,
+				A1D1F16C2038246400C1A3FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1D1F16D2038246400C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1D1F16E2038246400C1A3FA /* Debug */,
+				A1D1F16F2038246400C1A3FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1D1F1862038247E00C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1D1F1872038247E00C1A3FA /* Debug */,
+				A1D1F1882038247E00C1A3FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1D1F1892038247E00C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1D1F18A2038247E00C1A3FA /* Debug */,
+				A1D1F18B2038247E00C1A3FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1D1F1962038249600C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1D1F1972038249600C1A3FA /* Debug */,
+				A1D1F1982038249600C1A3FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
