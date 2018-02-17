@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A1D1F1742038247E00C1A3FA"
-               BuildableName = "RealmFlow_tvOS.framework"
+               BuildableName = "RealmFlow.framework"
                BlueprintName = "RealmFlow tvOS"
                ReferencedContainer = "container:RealmFlow.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1D1F1742038247E00C1A3FA"
-            BuildableName = "RealmFlow_tvOS.framework"
+            BuildableName = "RealmFlow.framework"
             BlueprintName = "RealmFlow tvOS"
             ReferencedContainer = "container:RealmFlow.xcodeproj">
          </BuildableReference>
@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1D1F1742038247E00C1A3FA"
-            BuildableName = "RealmFlow_tvOS.framework"
+            BuildableName = "RealmFlow.framework"
             BlueprintName = "RealmFlow tvOS"
             ReferencedContainer = "container:RealmFlow.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1D1F1742038247E00C1A3FA"
-            BuildableName = "RealmFlow_tvOS.framework"
+            BuildableName = "RealmFlow.framework"
             BlueprintName = "RealmFlow tvOS"
             ReferencedContainer = "container:RealmFlow.xcodeproj">
          </BuildableReference>
