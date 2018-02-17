@@ -23,6 +23,12 @@
 		A106DA652038134D00291896 /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
 		A1D1F0F02038153C00C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EE2038153C00C1A3FA /* RealmSwift.framework */; };
 		A1D1F0F12038153C00C1A3FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EF2038153C00C1A3FA /* Realm.framework */; };
+		A1D1F0F42038187700C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F22038187700C1A3FA /* RealmSwift.framework */; };
+		A1D1F0F52038187700C1A3FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F32038187700C1A3FA /* Realm.framework */; };
+		A1D1F0F8203818C100C1A3FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F6203818C100C1A3FA /* Realm.framework */; };
+		A1D1F0F9203818C100C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F7203818C100C1A3FA /* RealmSwift.framework */; };
+		A1D1F0FC203818D300C1A3FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0FA203818D300C1A3FA /* Realm.framework */; };
+		A1D1F0FD203818D300C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0FB203818D300C1A3FA /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		A106DA5A2038134D00291896 /* RealmFlow+Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmFlow+Add.swift"; sourceTree = "<group>"; };
 		A1D1F0EE2038153C00C1A3FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
 		A1D1F0EF2038153C00C1A3FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = SOURCE_ROOT; };
+		A1D1F0F22038187700C1A3FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/Mac/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
+		A1D1F0F32038187700C1A3FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/Mac/Realm.framework; sourceTree = SOURCE_ROOT; };
+		A1D1F0F6203818C100C1A3FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/tvOS/Realm.framework; sourceTree = SOURCE_ROOT; };
+		A1D1F0F7203818C100C1A3FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/tvOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
+		A1D1F0FA203818D300C1A3FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/watchOS/Realm.framework; sourceTree = SOURCE_ROOT; };
+		A1D1F0FB203818D300C1A3FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/watchOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D1F0FC203818D300C1A3FA /* Realm.framework in Frameworks */,
+				A1D1F0FD203818D300C1A3FA /* RealmSwift.framework in Frameworks */,
+				A1D1F0F8203818C100C1A3FA /* Realm.framework in Frameworks */,
+				A1D1F0F9203818C100C1A3FA /* RealmSwift.framework in Frameworks */,
+				A1D1F0F42038187700C1A3FA /* RealmSwift.framework in Frameworks */,
+				A1D1F0F52038187700C1A3FA /* Realm.framework in Frameworks */,
 				A1D1F0F02038153C00C1A3FA /* RealmSwift.framework in Frameworks */,
 				A1D1F0F12038153C00C1A3FA /* Realm.framework in Frameworks */,
 			);
@@ -129,6 +147,12 @@
 		A106DA662038142E00291896 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1D1F0FA203818D300C1A3FA /* Realm.framework */,
+				A1D1F0FB203818D300C1A3FA /* RealmSwift.framework */,
+				A1D1F0F6203818C100C1A3FA /* Realm.framework */,
+				A1D1F0F7203818C100C1A3FA /* RealmSwift.framework */,
+				A1D1F0F32038187700C1A3FA /* Realm.framework */,
+				A1D1F0F22038187700C1A3FA /* RealmSwift.framework */,
 				A1D1F0EF2038153C00C1A3FA /* Realm.framework */,
 				A1D1F0EE2038153C00C1A3FA /* RealmSwift.framework */,
 			);
@@ -407,6 +431,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
 				INFOPLIST_FILE = RealmFlow/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -414,9 +441,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.soopy.RealmFlow;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -435,6 +464,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
 				INFOPLIST_FILE = RealmFlow/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -442,8 +474,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.soopy.RealmFlow;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
 			name = Release;
 		};
