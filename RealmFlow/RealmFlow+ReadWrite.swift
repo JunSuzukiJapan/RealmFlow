@@ -58,6 +58,14 @@ public extension RealmFlow where RW: ReadWrite, T: Object, U: Results<T>, ROW: R
         }
     }
     
+    public func subscribe_with_write_permission(onNext: @escaping (Realm, Results<T>) -> ()) -> RealmRW<T, Results<T>, Raw> {
+        return RealmRW<T, Results<T>, Raw>{ realm in
+            let results = try! self._run(realm)
+            onNext(realm, results)
+            return results
+        }
+    }
+    
     public func sorted(_ by: @escaping (T, T) throws -> Bool) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
         return RealmRW<T, SequenceWrapper<T>, Wrap> { realm in
             let results: [T] = try! self._run(realm).sorted(by: by)
@@ -82,6 +90,14 @@ public extension RealmFlow where RW: ReadWrite, T: Object, U: SequenceWrapper<T>
         return RealmRW<T, SequenceWrapper<T>, Wrap>{ realm in
             let results = try! self._run(realm)
             onNext(results)
+            return results
+        }
+    }
+    
+    public func subscribe_with_write_permission(onNext: @escaping (Realm, SequenceWrapper<T>) -> ()) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
+        return RealmRW<T, SequenceWrapper<T>, Wrap>{ realm in
+            let results = try! self._run(realm)
+            onNext(realm, results)
             return results
         }
     }

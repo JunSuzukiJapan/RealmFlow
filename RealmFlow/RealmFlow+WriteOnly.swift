@@ -56,7 +56,11 @@ public extension RealmFlow where RW: WriteOnly, T: Object {
     public func subscribe(onNext: @escaping (Results<T>) -> ()) throws -> RealmWO<T> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
     }
-
+    
+    public func subscribe_with_write_permission(onNext: @escaping (Realm, Results<T>) -> ()) throws -> RealmWO<T> {
+        throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
+    }
+    
     public func sorted(_ by: @escaping (T, T) throws -> Bool) throws -> RealmRW<T, SequenceWrapper<T>, Wrap> {
         throw NSError(domain: "call sorted with no data", code: -1, userInfo: nil)
     }
