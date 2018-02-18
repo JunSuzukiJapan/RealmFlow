@@ -20,6 +20,7 @@
 		A106DA632038134D00291896 /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
 		A106DA642038134D00291896 /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
 		A106DA652038134D00291896 /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
+		A15EA5B02039A38F0019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
 		A1D1F0F02038153C00C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EE2038153C00C1A3FA /* RealmSwift.framework */; };
 		A1D1F0F12038153C00C1A3FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EF2038153C00C1A3FA /* Realm.framework */; };
 		A1D1F0F42038187700C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F22038187700C1A3FA /* RealmSwift.framework */; };
@@ -166,6 +167,7 @@
 		A106DA582038134D00291896 /* Realm+Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Run.swift"; sourceTree = "<group>"; };
 		A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmFlow+WriteOnly.swift"; sourceTree = "<group>"; };
 		A106DA5A2038134D00291896 /* RealmFlow+Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmFlow+Add.swift"; sourceTree = "<group>"; };
+		A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealmFlow+Combine.swift"; sourceTree = "<group>"; };
 		A1D1F0EE2038153C00C1A3FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
 		A1D1F0EF2038153C00C1A3FA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = SOURCE_ROOT; };
 		A1D1F0F22038187700C1A3FA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/Mac/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
@@ -311,6 +313,7 @@
 				A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */,
 				A106DA502038134D00291896 /* RealmFlow+Static.swift */,
 				A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */,
+				A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */,
 			);
 			path = RealmFlow;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				A106DA5C2038134D00291896 /* RealmFlow+Delete.swift in Sources */,
 				A106DA5D2038134D00291896 /* RealmFlow+ReadWrite.swift in Sources */,
 				A106DA632038134D00291896 /* Realm+Run.swift in Sources */,
+				A15EA5B02039A38F0019E3D7 /* RealmFlow+Combine.swift in Sources */,
 				A106DA612038134D00291896 /* RealmFlow+ReadOnly.swift in Sources */,
 				A106DA5B2038134D00291896 /* RealmFlow+Static.swift in Sources */,
 				A106DA602038134D00291896 /* RawOrWrap.swift in Sources */,

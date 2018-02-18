@@ -18,13 +18,6 @@ public struct RealmFlow<RW : ReadWriteType, T, U, ROW: RawOrWrap> {
     public init(_ _run: @escaping (Realm) throws -> U) {
         self._run = _run
     }
-
-    public func combine(_ flow: RealmFlow<RW, T, U, ROW>) -> RealmFlow<RW, T, U, ROW> {
-        return RealmFlow<RW, T, U, ROW> { realm in
-            let _ = try self._run(realm)
-            return try flow._run(realm)
-        }
-    }
 }
 
 // MARK: - typealias
