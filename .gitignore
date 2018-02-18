@@ -30,4 +30,4 @@ Podfile.lock
 
 # Carthage
 Carthage/Checkouts
-!Carthage/Build
+Carthage/Build
