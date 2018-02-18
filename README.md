@@ -48,7 +48,7 @@ func do_operations() {
       }
       .objects(Cat.self)  // query type Cat
       .add(taro) // add taro
-      .subscribe { results in  // process query type Cat
+      .subscribe { results in  // process query type Cat results
           print("second subscribe")
           for cat in results {
               print("cat.name: \(cat.name)")
