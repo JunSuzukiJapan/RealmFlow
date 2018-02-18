@@ -21,6 +21,13 @@
 		A106DA642038134D00291896 /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
 		A106DA652038134D00291896 /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
 		A15EA5B02039A38F0019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
+		A15EA5B12039AB450019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
+		A15EA5B22039AB4F0019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
+		A15EA5B32039AB550019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
+		A15EA5B42039AB5B0019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
+		A15EA5B52039AB610019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
+		A15EA5B62039AB670019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
+		A15EA5B72039AB6D0019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
 		A1D1F0F02038153C00C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EE2038153C00C1A3FA /* RealmSwift.framework */; };
 		A1D1F0F12038153C00C1A3FA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EF2038153C00C1A3FA /* Realm.framework */; };
 		A1D1F0F42038187700C1A3FA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F22038187700C1A3FA /* RealmSwift.framework */; };
@@ -752,6 +759,7 @@
 				A1D1F1A12038253600C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
 				A1D1F1A22038253600C1A3FA /* RealmFlow+Static.swift in Sources */,
 				A1D1F1A32038253600C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+				A15EA5B12039AB450019E3D7 /* RealmFlow+Combine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +778,7 @@
 				A1D1F1AC2038255700C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
 				A1D1F1AD2038255700C1A3FA /* RealmFlow+Static.swift in Sources */,
 				A1D1F1AE2038255700C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+				A15EA5B22039AB4F0019E3D7 /* RealmFlow+Combine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,6 +797,7 @@
 				A1D1F1B72038257200C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
 				A1D1F1B82038257200C1A3FA /* RealmFlow+Static.swift in Sources */,
 				A1D1F1B92038257200C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+				A15EA5B32039AB550019E3D7 /* RealmFlow+Combine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,6 +816,7 @@
 				A1D1F1C22038257F00C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
 				A1D1F1C32038257F00C1A3FA /* RealmFlow+Static.swift in Sources */,
 				A1D1F1C42038257F00C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+				A15EA5B42039AB5B0019E3D7 /* RealmFlow+Combine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +835,7 @@
 				A1D1F1CD2038258B00C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
 				A1D1F1CE2038258B00C1A3FA /* RealmFlow+Static.swift in Sources */,
 				A1D1F1CF2038258B00C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+				A15EA5B52039AB610019E3D7 /* RealmFlow+Combine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,6 +854,7 @@
 				A1D1F1D82038259700C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
 				A1D1F1D92038259700C1A3FA /* RealmFlow+Static.swift in Sources */,
 				A1D1F1DA2038259700C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+				A15EA5B62039AB670019E3D7 /* RealmFlow+Combine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,6 +873,7 @@
 				A1D1F1E3203825A200C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
 				A1D1F1E4203825A200C1A3FA /* RealmFlow+Static.swift in Sources */,
 				A1D1F1E5203825A200C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
+				A15EA5B72039AB6D0019E3D7 /* RealmFlow+Combine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

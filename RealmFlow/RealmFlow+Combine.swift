@@ -39,8 +39,8 @@ public extension RealmFlow where RW: WriteOnly {
         }
     }
     
-    public func combine(_ flow: RealmFlow<WriteOnly, T, U, ROW>) -> RealmWO<T, U, ROW> {
-        return RealmWO<T, U, ROW> { realm in
+    public func combine(_ flow: RealmFlow<WriteOnly, T, U, ROW>) -> RealmFlow<WriteOnly, T, U, ROW> {
+        return RealmFlow<WriteOnly, T, U, ROW> { realm in
             let _ = try self._run(realm)
             return try flow._run(realm)
         }
