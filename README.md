@@ -117,7 +117,7 @@ pod 'RealmFlow', '~> 0.1'
     let flow = Realm.Flow.objects(Dog.self)
         .subscribe_with_write_permission { (realm, results) in
             results.first?.name = "Pochi"
-    }
+        }
 
     let realm = try! Realm()
     let _ = try? realm.run(flow: flow)
@@ -132,7 +132,7 @@ pod 'RealmFlow', '~> 0.1'
             if dog != nil {
                 realm.delete(dog!)
             }
-    }
+        }
     
     let realm = try! Realm()
     let _ = try? realm.run(flow: flow)
