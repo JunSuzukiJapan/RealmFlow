@@ -2,8 +2,11 @@
 
   RealmFlow makes Realm operation more easy.
   - Define Realm operation as `RealmFlow`.
+  - Write operations following the previous operation, using method chain.
   - Run Realm operation with `realm.run(flow:)`.
-  - Write operations following the previous operations, without being disturbed thinking.
+
+RealmFlow call ```realm.beginTransaction()``` automatically, if needed.
+So you don't need to think about transaction
 
 example:
 
@@ -128,12 +131,16 @@ pod 'RealmFlow', '~> 0.1'
 ```swift: Delete
     let flow = Realm.Flow.objects(Dog.self)
         .subscribe_with_write_permission { (realm, results) in
-            let dog = results.first
-            if dog != nil {
-                realm.delete(dog!)
+            if let dog = results.first {
+                realm.delete(dog)
             }
         }
     
     let realm = try! Realm()
     let _ = try? realm.run(flow: flow)
 ```
+
+
+# Credits
+
+RealmFlow was inspired by [RealmIO](https://github.com/ukitaka/RealmIO).
