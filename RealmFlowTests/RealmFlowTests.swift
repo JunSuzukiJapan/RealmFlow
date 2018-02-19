@@ -30,6 +30,10 @@ class RealmFlowTests: XCTestCase {
         super.tearDown()
     }
     
+    func testSuccess(){
+        XCTAssertTrue(true)
+    }
+    
     func testAdd(){
         let poti = Dog()
         poti.name = "Poti"
