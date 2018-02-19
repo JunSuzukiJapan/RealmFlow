@@ -6,8 +6,11 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
   RealmFlow makes Realm operation more easy.
   - Define Realm operation as `RealmFlow`.
+  - Write operations following the previous operation, using method chain.
   - Run Realm operation with `realm.run(flow:)`.
-  - Write operations Following the previous operations, without being disturbed thinking.
+
+RealmFlow call ```realm.beginTransaction()``` automatically, if needed.
+So you don't need to think about transaction
 
 example:
 
