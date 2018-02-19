@@ -31,8 +31,8 @@ class RealmFlowTests: XCTestCase {
     }
 
     func testAddAndQuery(){
-        let poti = Dog()
-        poti.name = "Pochi"
+        let pochi = Dog()
+        pochi.name = "Pochi"
         let tama = Cat()
         tama.name = "Tama"
         let hachi = Dog()
@@ -40,7 +40,7 @@ class RealmFlowTests: XCTestCase {
         
         var flow = Realm.Flow.deleteAll()
             .add(tama)
-            .add(poti)
+            .add(pochi)
         let flow2 = Realm.Flow.add(hachi)
         flow = flow.combine(flow2)
 
