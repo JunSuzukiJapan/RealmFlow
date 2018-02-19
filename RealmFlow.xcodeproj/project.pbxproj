@@ -9,19 +9,15 @@
 /* Begin PBXBuildFile section */
 		A13EEFBD203A98E000CB713D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EF2038153C00C1A3FA /* Realm.framework */; };
 		A13EEFBE203A98E000CB713D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EE2038153C00C1A3FA /* RealmSwift.framework */; };
-		A13EEFBF203A990200CB713D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EF2038153C00C1A3FA /* Realm.framework */; };
-		A13EEFC0203A990200CB713D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0EE2038153C00C1A3FA /* RealmSwift.framework */; };
 		A13EEFC1203A991400CB713D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F6203818C100C1A3FA /* Realm.framework */; };
 		A13EEFC2203A991400CB713D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F0F7203818C100C1A3FA /* RealmSwift.framework */; };
+		A13EEFC5203A9BCC00CB713D /* RealmFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA44203811DD00291896 /* RealmFlowTests.swift */; };
+		A13EEFC7203A9D2A00CB713D /* RealmFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA44203811DD00291896 /* RealmFlowTests.swift */; };
 		A15EA5B12039AB450019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
-		A15EA5B22039AB4F0019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
 		A15EA5B32039AB550019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
-		A15EA5B42039AB5B0019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
 		A15EA5B52039AB610019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
-		A15EA5B62039AB670019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
 		A15EA5B72039AB6D0019E3D7 /* RealmFlow+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EA5AF2039A38F0019E3D7 /* RealmFlow+Combine.swift */; };
 		A1D1F1462038243E00C1A3FA /* RealmFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F13D2038243E00C1A3FA /* RealmFlow.framework */; };
-		A1D1F1622038246400C1A3FA /* RealmFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F1592038246400C1A3FA /* RealmFlow.framework */; };
 		A1D1F17E2038247E00C1A3FA /* RealmFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D1F1752038247E00C1A3FA /* RealmFlow.framework */; };
 		A1D1F1992038253600C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
 		A1D1F19A2038253600C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
@@ -34,17 +30,6 @@
 		A1D1F1A12038253600C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
 		A1D1F1A22038253600C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
 		A1D1F1A32038253600C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
-		A1D1F1A42038255700C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
-		A1D1F1A52038255700C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
-		A1D1F1A62038255700C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
-		A1D1F1A72038255700C1A3FA /* Realm+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA572038134D00291896 /* Realm+Util.swift */; };
-		A1D1F1A82038255700C1A3FA /* RealmFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA532038134D00291896 /* RealmFlow.swift */; };
-		A1D1F1A92038255700C1A3FA /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
-		A1D1F1AA2038255700C1A3FA /* RealmFlow+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA512038134D00291896 /* RealmFlow+Delete.swift */; };
-		A1D1F1AB2038255700C1A3FA /* RealmFlow+ReadOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA562038134D00291896 /* RealmFlow+ReadOnly.swift */; };
-		A1D1F1AC2038255700C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
-		A1D1F1AD2038255700C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
-		A1D1F1AE2038255700C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
 		A1D1F1AF2038257200C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
 		A1D1F1B02038257200C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
 		A1D1F1B12038257200C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
@@ -56,17 +41,6 @@
 		A1D1F1B72038257200C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
 		A1D1F1B82038257200C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
 		A1D1F1B92038257200C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
-		A1D1F1BA2038257F00C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
-		A1D1F1BB2038257F00C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
-		A1D1F1BC2038257F00C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
-		A1D1F1BD2038257F00C1A3FA /* Realm+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA572038134D00291896 /* Realm+Util.swift */; };
-		A1D1F1BE2038257F00C1A3FA /* RealmFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA532038134D00291896 /* RealmFlow.swift */; };
-		A1D1F1BF2038257F00C1A3FA /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
-		A1D1F1C02038257F00C1A3FA /* RealmFlow+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA512038134D00291896 /* RealmFlow+Delete.swift */; };
-		A1D1F1C12038257F00C1A3FA /* RealmFlow+ReadOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA562038134D00291896 /* RealmFlow+ReadOnly.swift */; };
-		A1D1F1C22038257F00C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
-		A1D1F1C32038257F00C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
-		A1D1F1C42038257F00C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
 		A1D1F1C52038258B00C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
 		A1D1F1C62038258B00C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
 		A1D1F1C72038258B00C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
@@ -78,17 +52,6 @@
 		A1D1F1CD2038258B00C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
 		A1D1F1CE2038258B00C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
 		A1D1F1CF2038258B00C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
-		A1D1F1D02038259700C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
-		A1D1F1D12038259700C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
-		A1D1F1D22038259700C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
-		A1D1F1D32038259700C1A3FA /* Realm+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA572038134D00291896 /* Realm+Util.swift */; };
-		A1D1F1D42038259700C1A3FA /* RealmFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA532038134D00291896 /* RealmFlow.swift */; };
-		A1D1F1D52038259700C1A3FA /* RealmFlow+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA5A2038134D00291896 /* RealmFlow+Add.swift */; };
-		A1D1F1D62038259700C1A3FA /* RealmFlow+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA512038134D00291896 /* RealmFlow+Delete.swift */; };
-		A1D1F1D72038259700C1A3FA /* RealmFlow+ReadOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA562038134D00291896 /* RealmFlow+ReadOnly.swift */; };
-		A1D1F1D82038259700C1A3FA /* RealmFlow+ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA522038134D00291896 /* RealmFlow+ReadWrite.swift */; };
-		A1D1F1D92038259700C1A3FA /* RealmFlow+Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA502038134D00291896 /* RealmFlow+Static.swift */; };
-		A1D1F1DA2038259700C1A3FA /* RealmFlow+WriteOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA592038134D00291896 /* RealmFlow+WriteOnly.swift */; };
 		A1D1F1DB203825A200C1A3FA /* RawOrWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA552038134D00291896 /* RawOrWrap.swift */; };
 		A1D1F1DC203825A200C1A3FA /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA542038134D00291896 /* ReadWrite.swift */; };
 		A1D1F1DD203825A200C1A3FA /* Realm+Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106DA582038134D00291896 /* Realm+Run.swift */; };
@@ -117,13 +80,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = A1D1F13C2038243E00C1A3FA;
 			remoteInfo = "RealmFlow iOS";
-		};
-		A1D1F1632038246400C1A3FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A106DA2D203811DD00291896 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A1D1F1582038246400C1A3FA;
-			remoteInfo = "RealmFlow macOS";
 		};
 		A1D1F17F2038247E00C1A3FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -161,7 +117,6 @@
 		A1D1F13D2038243E00C1A3FA /* RealmFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D1F1452038243E00C1A3FA /* RealmFlow iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RealmFlow iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D1F1592038246400C1A3FA /* RealmFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1D1F1612038246400C1A3FA /* RealmFlow macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RealmFlow macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D1F1752038247E00C1A3FA /* RealmFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D1F17D2038247E00C1A3FA /* RealmFlow tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RealmFlow tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D1F1912038249600C1A3FA /* RealmFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,16 +148,6 @@
 			files = (
 				A1D1F1E82038278F00C1A3FA /* Realm.framework in Frameworks */,
 				A1D1F1E92038278F00C1A3FA /* RealmSwift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1D1F15E2038246400C1A3FA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A13EEFBF203A990200CB713D /* Realm.framework in Frameworks */,
-				A13EEFC0203A990200CB713D /* RealmSwift.framework in Frameworks */,
-				A1D1F1622038246400C1A3FA /* RealmFlow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +199,6 @@
 				A1D1F13D2038243E00C1A3FA /* RealmFlow.framework */,
 				A1D1F1452038243E00C1A3FA /* RealmFlow iOSTests.xctest */,
 				A1D1F1592038246400C1A3FA /* RealmFlow.framework */,
-				A1D1F1612038246400C1A3FA /* RealmFlow macOSTests.xctest */,
 				A1D1F1752038247E00C1A3FA /* RealmFlow.framework */,
 				A1D1F17D2038247E00C1A3FA /* RealmFlow tvOSTests.xctest */,
 				A1D1F1912038249600C1A3FA /* RealmFlow.framework */,
@@ -417,24 +361,6 @@
 			productReference = A1D1F1592038246400C1A3FA /* RealmFlow.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A1D1F1602038246400C1A3FA /* RealmFlow macOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A1D1F16D2038246400C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow macOSTests" */;
-			buildPhases = (
-				A1D1F15D2038246400C1A3FA /* Sources */,
-				A1D1F15E2038246400C1A3FA /* Frameworks */,
-				A1D1F15F2038246400C1A3FA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A1D1F1642038246400C1A3FA /* PBXTargetDependency */,
-			);
-			name = "RealmFlow macOSTests";
-			productName = "RealmFlow macOSTests";
-			productReference = A1D1F1612038246400C1A3FA /* RealmFlow macOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		A1D1F1742038247E00C1A3FA /* RealmFlow tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1D1F1862038247E00C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow tvOS" */;
@@ -511,10 +437,6 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					A1D1F1602038246400C1A3FA = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
 					A1D1F1742038247E00C1A3FA = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -544,7 +466,6 @@
 				A1D1F13C2038243E00C1A3FA /* RealmFlow iOS */,
 				A1D1F1442038243E00C1A3FA /* RealmFlow iOSTests */,
 				A1D1F1582038246400C1A3FA /* RealmFlow macOS */,
-				A1D1F1602038246400C1A3FA /* RealmFlow macOSTests */,
 				A1D1F1742038247E00C1A3FA /* RealmFlow tvOS */,
 				A1D1F17C2038247E00C1A3FA /* RealmFlow tvOSTests */,
 				A1D1F1902038249600C1A3FA /* RealmFlow watchOS */,
@@ -568,13 +489,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A1D1F1572038246400C1A3FA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1D1F15F2038246400C1A3FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -628,18 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1D1F1A42038255700C1A3FA /* RawOrWrap.swift in Sources */,
-				A1D1F1A52038255700C1A3FA /* ReadWrite.swift in Sources */,
-				A1D1F1A62038255700C1A3FA /* Realm+Run.swift in Sources */,
-				A1D1F1A72038255700C1A3FA /* Realm+Util.swift in Sources */,
-				A1D1F1A82038255700C1A3FA /* RealmFlow.swift in Sources */,
-				A1D1F1A92038255700C1A3FA /* RealmFlow+Add.swift in Sources */,
-				A1D1F1AA2038255700C1A3FA /* RealmFlow+Delete.swift in Sources */,
-				A1D1F1AB2038255700C1A3FA /* RealmFlow+ReadOnly.swift in Sources */,
-				A1D1F1AC2038255700C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
-				A1D1F1AD2038255700C1A3FA /* RealmFlow+Static.swift in Sources */,
-				A1D1F1AE2038255700C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
-				A15EA5B22039AB4F0019E3D7 /* RealmFlow+Combine.swift in Sources */,
+				A13EEFC5203A9BCC00CB713D /* RealmFlowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,25 +562,6 @@
 				A1D1F1B82038257200C1A3FA /* RealmFlow+Static.swift in Sources */,
 				A1D1F1B92038257200C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
 				A15EA5B32039AB550019E3D7 /* RealmFlow+Combine.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1D1F15D2038246400C1A3FA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1D1F1BA2038257F00C1A3FA /* RawOrWrap.swift in Sources */,
-				A1D1F1BB2038257F00C1A3FA /* ReadWrite.swift in Sources */,
-				A1D1F1BC2038257F00C1A3FA /* Realm+Run.swift in Sources */,
-				A1D1F1BD2038257F00C1A3FA /* Realm+Util.swift in Sources */,
-				A1D1F1BE2038257F00C1A3FA /* RealmFlow.swift in Sources */,
-				A1D1F1BF2038257F00C1A3FA /* RealmFlow+Add.swift in Sources */,
-				A1D1F1C02038257F00C1A3FA /* RealmFlow+Delete.swift in Sources */,
-				A1D1F1C12038257F00C1A3FA /* RealmFlow+ReadOnly.swift in Sources */,
-				A1D1F1C22038257F00C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
-				A1D1F1C32038257F00C1A3FA /* RealmFlow+Static.swift in Sources */,
-				A1D1F1C42038257F00C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
-				A15EA5B42039AB5B0019E3D7 /* RealmFlow+Combine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,18 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1D1F1D02038259700C1A3FA /* RawOrWrap.swift in Sources */,
-				A1D1F1D12038259700C1A3FA /* ReadWrite.swift in Sources */,
-				A1D1F1D22038259700C1A3FA /* Realm+Run.swift in Sources */,
-				A1D1F1D32038259700C1A3FA /* Realm+Util.swift in Sources */,
-				A1D1F1D42038259700C1A3FA /* RealmFlow.swift in Sources */,
-				A1D1F1D52038259700C1A3FA /* RealmFlow+Add.swift in Sources */,
-				A1D1F1D62038259700C1A3FA /* RealmFlow+Delete.swift in Sources */,
-				A1D1F1D72038259700C1A3FA /* RealmFlow+ReadOnly.swift in Sources */,
-				A1D1F1D82038259700C1A3FA /* RealmFlow+ReadWrite.swift in Sources */,
-				A1D1F1D92038259700C1A3FA /* RealmFlow+Static.swift in Sources */,
-				A1D1F1DA2038259700C1A3FA /* RealmFlow+WriteOnly.swift in Sources */,
-				A15EA5B62039AB670019E3D7 /* RealmFlow+Combine.swift in Sources */,
+				A13EEFC7203A9D2A00CB713D /* RealmFlowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,11 +618,6 @@
 			isa = PBXTargetDependency;
 			target = A1D1F13C2038243E00C1A3FA /* RealmFlow iOS */;
 			targetProxy = A1D1F1472038243E00C1A3FA /* PBXContainerItemProxy */;
-		};
-		A1D1F1642038246400C1A3FA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A1D1F1582038246400C1A3FA /* RealmFlow macOS */;
-			targetProxy = A1D1F1632038246400C1A3FA /* PBXContainerItemProxy */;
 		};
 		A1D1F1802038247E00C1A3FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -933,7 +801,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Configs/Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -952,7 +820,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Configs/Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1012,50 +880,6 @@
 				PRODUCT_NAME = RealmFlow;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		A1D1F16E2038246400C1A3FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 5JJA3VPYD7;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = Configs/Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-macOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		A1D1F16F2038246400C1A3FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 5JJA3VPYD7;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = Configs/Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-macOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -1125,7 +949,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
 				INFOPLIST_FILE = Configs/Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1146,7 +970,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
 				INFOPLIST_FILE = Configs/Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.soopy.RealmFlow-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1245,15 +1069,6 @@
 			buildConfigurations = (
 				A1D1F16B2038246400C1A3FA /* Debug */,
 				A1D1F16C2038246400C1A3FA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A1D1F16D2038246400C1A3FA /* Build configuration list for PBXNativeTarget "RealmFlow macOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A1D1F16E2038246400C1A3FA /* Debug */,
-				A1D1F16F2038246400C1A3FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

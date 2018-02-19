@@ -7,15 +7,15 @@
 //
 
 import XCTest
-@testable import RealmFlow
 import RealmSwift
+@testable import RealmFlow
 
 class Dog : Object {
-    public var name: String = ""
+    @objc dynamic var name: String = ""
 }
 
 class Cat : Object {
-    public var name: String = ""
+    @objc dynamic var name: String = ""
 }
 
 class RealmFlowTests: XCTestCase {
@@ -29,51 +29,39 @@ class RealmFlowTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testSuccess(){
-        XCTAssertTrue(true)
-    }
-    
-    func testAdd(){
+
+    func testAddAndQuery(){
         let poti = Dog()
-        poti.name = "Poti"
+        poti.name = "Pochi"
         let tama = Cat()
         tama.name = "Tama"
         let hachi = Dog()
         hachi.name = "Hachi"
         
-        var flow = Realm.Flow.add(tama)
+        var flow = Realm.Flow.deleteAll()
+            .add(tama)
             .add(poti)
         let flow2 = Realm.Flow.add(hachi)
         flow = flow.combine(flow2)
-        
+
         let realm = try! Realm()
         try? realm.run(flow: flow)
-    }
-    
-    func testQuery(){
-        let flow = Realm.Flow.objects(Dog.self)
-            .subscribe { results in
-                print("results = \(results)")
-                //let a = results.filter(NSPredicate(format: "name != %@", argumentArray: ["Poti"]))
-                for dog in results {
-                    print("1 name: \(dog.name)")
-                }
-            }
-            .filter({ $0.name != "Poti" })
-            .subscribe { results in
-                for dog in results {
-                    print("2 name: \(dog.name)")
-                }
-        }
         
-        let realm = try! Realm()
-        let _ = try? realm.run(flow: flow)
+        let test = Realm.Flow.objects(Dog.self)
+        let results = try! realm.run(flow: test)
+        XCTAssertEqual(results.count, 2)
+        XCTAssertEqual(results[0].name, "Pochi")
+        XCTAssertEqual(results[1].name, "Hachi")
+        
+        let test2 = Realm.Flow.objects(Cat.self)
+        let results2 = try! realm.run(flow: test2)
+        XCTAssertEqual(results2.count, 1)
+        XCTAssertEqual(results2.first?.name, "Tama")
     }
-    
+
     func testManyFlow() {
         let pochi = Dog()
-        pochi.name = "Poti"
+        pochi.name = "Pochi"
         let tama = Cat()
         tama.name = "Tama"
         let hachi = Dog()
@@ -89,38 +77,30 @@ class RealmFlowTests: XCTestCase {
             .add(hachi)
             .objects(Dog.self)
             .subscribe { results in
-                print("first subscribe")
-                for dog in results {
-                    print("dog.name: \(dog.name)")
-                }
+                XCTAssertEqual(results.count, 2)
+                let sorted = results.sorted(by: {dog1, dog2 in dog1.name < dog2.name})
+                XCTAssertEqual(sorted[0].name, "Hachi")
+                XCTAssertEqual(sorted[1].name, "Pochi")
             }
             .objects(Cat.self)
             .add(taro)
             .subscribe { results in
-                print("second subscribe")
-                for cat in results {
-                    print("cat.name: \(cat.name)")
-                }
+                XCTAssertEqual(results.count, 1)
+                XCTAssertEqual(results.first?.name, "Tama")
             }
             .delete(pochi)
             .add(jiro)
             .objects(Dog.self)
             .subscribe { results in
-                print("third subscribe")
-                for dog in results {
-                    print("dog.name: \(dog.name)")
-                }
+                XCTAssertEqual(results.count, 3)
+                let sorted = results.sorted(by: {dog1, dog2 in dog1.name < dog2.name})
+                XCTAssertEqual(sorted[0].name, "Hachi")
+                XCTAssertEqual(sorted[1].name, "Jiro")
+                XCTAssertEqual(sorted[2].name, "Taro")
             }
         
         let realm = try! Realm()
         let _ = try? realm.run(flow: flow)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+
 }
