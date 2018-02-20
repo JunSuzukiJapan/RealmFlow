@@ -23,14 +23,15 @@ class Dog : Object {
 }
 
 class Cat : Object {
+    @objc dynamic var id: String = ""
     @objc dynamic var name: String = ""
     
     override static func primaryKey() -> String? {
-        return "name"
+        return "id"
     }
 
     override static func indexedProperties() -> [String] {
-        return ["name"]
+        return ["id"]
     }
 }
 
@@ -118,15 +119,13 @@ class RealmFlowTests: XCTestCase {
             .object(ofType: Dog.self, forPrimaryKey: "Pochi")
             .subscribe_opt { result in
                 XCTAssertNotNil(result as Any)
-                if let dog = result {
-                    XCTAssertEqual(dog?.name, "Pochi")
-                }
+                XCTAssertEqual(result?.name, "Pochi")
             }
             .object(ofType: Dog.self, forPrimaryKey: "Hachi")
             .subscribe_opt { result in
                 XCTAssertNotNil(result as Any)
                 if let dog = result {
-                    XCTAssertEqual(dog?.name, "Hachi")
+                    XCTAssertEqual(dog.name, "Hachi")
                 }
             }
 
@@ -161,6 +160,35 @@ class RealmFlowTests: XCTestCase {
         let results2 = try! realm.run(flow: test2)
         XCTAssertEqual(results2.count, 1)
         XCTAssertEqual(results2.first?.name, "Tama")
+    }
+    
+    func testUpdate(){
+        let tama = Cat()
+        tama.id = "cat1"
+        tama.name = "Tama"
+        
+        let addFlow = Realm.Flow
+            .add(tama)
+
+        let updateFlow = Realm.Flow
+            .object(ofType: Cat.self, forPrimaryKey: "cat1")
+            .subscribe_opt_with_write_permission { realm, result in
+                XCTAssertNotNil(result as Any)
+                XCTAssertEqual(result?.name, "Tama")
+                result!.name = "Buchi"
+            }
+
+        let testFlow = Realm.Flow
+            .objects(Cat.self)
+            .subscribe { results in
+                XCTAssertEqual(results.count, 1)
+                XCTAssertEqual(results.first?.name, "Buchi")
+            }
+
+        let realm = try! Realm()
+        let _ = try! realm.run(flow: addFlow)
+        let _ = try! realm.run(flow: updateFlow)
+        let _ = try! realm.run(flow: testFlow)
     }
 
     func testComplexFlow() {

@@ -126,17 +126,33 @@ public extension RealmFlow where RW: ReadWrite, ROW: RawObject {
     // メモ： subscribe() だと、RawResultsなのかRawObjectなのか、
     // コンパイラがうまく判断してくれないようなので、
     // 諦めて別名のメソッドにした。
-    public func subscribe_opt(onNext: @escaping (T?) -> ()) -> RealmRW<T?, T?, RawObject> {
-        return RealmRW<T?, T?, RawObject>{ realm in
-            let result: T? = try! self._run(realm) as! T
+    public func subscribe_opt(_ onNext: @escaping (T) -> ()) -> RealmRW<T, T, RawObject> {
+        return RealmRW<T, T, RawObject>{ realm in
+            let result: T = try! self._run(realm) as! T
             onNext(result)
             return result
         }
     }
     
-    public func subscribe_opt_with_write_permission(onNext: @escaping (Realm, T?) -> ()) -> RealmRW<T?, T?, RawObject> {
-        return RealmRW<T?, T?, RawObject>{ realm in
-            let result: T? = try! self._run(realm) as! T
+    public func subscribe_opt_with_write_permission(_ onNext: @escaping (Realm, T) -> ()) -> RealmRW<T, T, RawObject> {
+        return RealmRW<T, T, RawObject>{ realm in
+            let result: T = try! self._run(realm) as! T
+            onNext(realm, result)
+            return result
+        }
+    }
+    
+    public func subscribe(_ onNext: @escaping (T) -> ()) -> RealmRW<T, T, RawObject> {
+        return RealmRW<T, T, RawObject>{ realm in
+            let result: T = try! self._run(realm) as! T
+            onNext(result)
+            return result
+        }
+    }
+    
+    public func subscribe_with_write_permission(_ onNext: @escaping (Realm, T) -> ()) -> RealmRW<T, T, RawObject> {
+        return RealmRW<T, T, RawObject>{ realm in
+            let result: T = try! self._run(realm) as! T
             onNext(realm, result)
             return result
         }

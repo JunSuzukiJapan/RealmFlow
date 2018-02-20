@@ -53,19 +53,19 @@ public extension RealmFlow where RW: WriteOnly {
 //    subscribe, sorted, filterの３つのメソッドをここで定義しておかないと、
 //    ReadOnly & ReadWrite時に呼び出す時に、どのメソッドを使うのかの推論がうまくいかないようだ。
 public extension RealmFlow where RW: WriteOnly, T: Object {
-    public func subscribe(onNext: @escaping (Results<T>) -> ()) throws -> RealmWO<T, ROW> {
+    public func subscribe(_ onNext: @escaping (Results<T>) -> ()) throws -> RealmWO<T, ROW> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
     }
     
-    public func subscribe_with_write_permission(onNext: @escaping (Realm, Results<T>) -> ()) throws -> RealmWO<T, ROW> {
+    public func subscribe_with_write_permission(_ onNext: @escaping (Realm, Results<T>) -> ()) throws -> RealmWO<T, ROW> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
     }
 
-    public func subscribe_opt(onNext: @escaping (T?) -> ()) throws -> RealmRO<T?, T?, RawObject> {
+    public func subscribe_opt(_ onNext: @escaping (T) -> ()) throws -> RealmRO<T, T, RawObject> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
     }
     
-    public func subscribe_opt_with_write_permission(onNext: @escaping (Realm, T?) -> ()) throws -> RealmRW<T?, T?, RawObject> {
+    public func subscribe_opt_with_write_permission(_ onNext: @escaping (Realm, T) -> ()) throws -> RealmRW<T, T, RawObject> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
     }
 

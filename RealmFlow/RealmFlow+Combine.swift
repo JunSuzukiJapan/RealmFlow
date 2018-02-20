@@ -9,22 +9,22 @@
 import Foundation
 
 public extension RealmFlow where RW: ReadOnly {
-    public func combine(_ flow: RealmFlow<ReadOnly, T, U, ROW>) -> RealmRO<T, U, ROW> {
-        return RealmRO<T, U, ROW> { realm in
+    public func combine<V, W, X>(_ flow: RealmFlow<ReadOnly, V, W, X>) -> RealmRO<V, W, X> {
+        return RealmRO<V, W, X> { realm in
             let _ = try self._run(realm)
             return try flow._run(realm)
         }
     }
     
-    public func combine(_ flow: RealmFlow<WriteOnly, T, U, ROW>) -> RealmRW<T, U, ROW> {
-        return RealmRW<T, U, ROW> { realm in
+    public func combine<V, W, X>(_ flow: RealmFlow<WriteOnly, V, W, X>) -> RealmRW<V, W, X> {
+        return RealmRW<V, W, X> { realm in
             let _ = try self._run(realm)
             return try flow._run(realm)
         }
     }
     
-    public func combine(_ flow: RealmFlow<ReadWrite, T, U, ROW>) -> RealmRW<T, U, ROW> {
-        return RealmRW<T, U, ROW> { realm in
+    public func combine<V, W, X>(_ flow: RealmFlow<ReadWrite, V, W, X>) -> RealmRW<V, W, X> {
+        return RealmRW<V, W, X> { realm in
             let _ = try self._run(realm)
             return try flow._run(realm)
         }
@@ -32,22 +32,22 @@ public extension RealmFlow where RW: ReadOnly {
 }
 
 public extension RealmFlow where RW: WriteOnly {
-    public func combine(_ flow: RealmFlow<ReadOnly, T, U, ROW>) -> RealmRW<T, U, ROW> {
-        return RealmRW<T, U, ROW> { realm in
+    public func combine<V, W, X>(_ flow: RealmFlow<ReadOnly, V, W, X>) -> RealmRW<V, W, X> {
+        return RealmRW<V, W, X> { realm in
             let _ = try self._run(realm)
             return try flow._run(realm)
         }
     }
     
-    public func combine(_ flow: RealmFlow<WriteOnly, T, U, ROW>) -> RealmFlow<WriteOnly, T, U, ROW> {
-        return RealmFlow<WriteOnly, T, U, ROW> { realm in
+    public func combine<V, W, X>(_ flow: RealmFlow<WriteOnly, V, W, X>) -> RealmFlow<WriteOnly, V, W, X> {
+        return RealmFlow<WriteOnly, V, W, X> { realm in
             let _ = try self._run(realm)
             return try flow._run(realm)
         }
     }
     
-    public func combine(_ flow: RealmFlow<ReadWrite, T, U, ROW>) -> RealmRW<T, U, ROW> {
-        return RealmRW<T, U, ROW> { realm in
+    public func combine<V, W, X>(_ flow: RealmFlow<ReadWrite, V, W, X>) -> RealmRW<V, W, X> {
+        return RealmRW<V, W, X> { realm in
             let _ = try self._run(realm)
             return try flow._run(realm)
         }
@@ -55,8 +55,22 @@ public extension RealmFlow where RW: WriteOnly {
 }
 
 public extension RealmFlow where RW: ReadWrite {
-    public func combine(_ flow: RealmFlow<RW, T, U, ROW>) -> RealmRW<T, U, ROW> {
-        return RealmRW<T, U, ROW> { realm in
+    public func combine<V, W, X>(_ flow: RealmFlow<ReadOnly, V, W, X>) -> RealmRW<V, W, X> {
+        return RealmRW<V, W, X> { realm in
+            let _ = try self._run(realm)
+            return try flow._run(realm)
+        }
+    }
+    
+    public func combine<V, W, X>(_ flow: RealmFlow<WriteOnly, V, W, X>) -> RealmRW<V, W, X> {
+        return RealmRW<V, W, X> { realm in
+            let _ = try self._run(realm)
+            return try flow._run(realm)
+        }
+    }
+    
+    public func combine<V, W, X>(_ flow: RealmFlow<ReadWrite, V, W, X>) -> RealmRW<V, W, X> {
+        return RealmRW<V, W, X> { realm in
             let _ = try self._run(realm)
             return try flow._run(realm)
         }

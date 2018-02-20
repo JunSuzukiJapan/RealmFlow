@@ -54,7 +54,7 @@ public extension RealmFlow where RW: ReadOnly {
 //    where ReadOrWrapper = Raw, U = Results<T>
 //
 public extension RealmFlow where RW: ReadOnly, T: Object, U: Results<T>, ROW: RawResults {
-    public func subscribe(onNext: @escaping (Results<T>) -> ()) -> RealmRO<T, Results<T>, RawResults> {
+    public func subscribe(_ onNext: @escaping (Results<T>) -> ()) -> RealmRO<T, Results<T>, RawResults> {
         return RealmRO<T, Results<T>, RawResults>{ realm in
             let results = try! self._run(realm)
             onNext(results)
@@ -62,7 +62,7 @@ public extension RealmFlow where RW: ReadOnly, T: Object, U: Results<T>, ROW: Ra
         }
     }
     
-    public func subscribe_with_write_permission(onNext: @escaping (Realm, Results<T>) -> ()) -> RealmRW<T, Results<T>, RawResults> {
+    public func subscribe_with_write_permission(_ onNext: @escaping (Realm, Results<T>) -> ()) -> RealmRW<T, Results<T>, RawResults> {
         return RealmRW<T, Results<T>, RawResults>{ realm in
             let results = try! self._run(realm)
             onNext(realm, results)
@@ -117,7 +117,7 @@ public extension RealmFlow where RW: ReadOnly, T: Object, U: Results<T>, ROW: Ra
 //    where ReadOrWrapper = Wrapper
 //
 public extension RealmFlow where RW: ReadOnly, T: Object, U: SequenceWrapper<T>, ROW: Wrap {
-    public func subscribe(onNext: @escaping (SequenceWrapper<T>) -> ()) -> RealmRO<T, SequenceWrapper<T>, Wrap> {
+    public func subscribe(_ onNext: @escaping (SequenceWrapper<T>) -> ()) -> RealmRO<T, SequenceWrapper<T>, Wrap> {
         return RealmRO<T, SequenceWrapper<T>, Wrap>{ realm in
             let results = try! self._run(realm)
             onNext(results)
@@ -125,7 +125,7 @@ public extension RealmFlow where RW: ReadOnly, T: Object, U: SequenceWrapper<T>,
         }
     }
     
-    public func subscribe_with_write_permission(onNext: @escaping (Realm, SequenceWrapper<T>) -> ()) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
+    public func subscribe_with_write_permission(_ onNext: @escaping (Realm, SequenceWrapper<T>) -> ()) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
         return RealmRW<T, SequenceWrapper<T>, Wrap>{ realm in
             let results = try! self._run(realm)
             onNext(realm, results)
@@ -160,20 +160,20 @@ public extension RealmFlow where RW: ReadOnly, T: Object, U: SequenceWrapper<T>,
 
 //
 //  RealmFlow
-//    where ReadOrWrapper = RawObject, U = T?
+//    where ReadOrWrapper = RawObject
 //
 public extension RealmFlow where RW: ReadOnly, ROW: RawObject {
-    public func subscribe_opt(onNext: @escaping (T?) -> ()) -> RealmRO<T?, T?, RawObject> {
-        return RealmRO<T?, T?, RawObject>{ realm in
-            let result: T? = try! self._run(realm) as! T
+    public func subscribe_opt(_ onNext: @escaping (T) -> ()) -> RealmRO<T, T, RawObject> {
+        return RealmRO<T, T, RawObject>{ realm in
+            let result: T = try! self._run(realm) as! T
             onNext(result)
             return result
         }
     }
     
-    public func subscribe_opt_with_write_permission(onNext: @escaping (Realm, T?) -> ()) -> RealmRW<T?, T?, RawObject> {
-        return RealmRW<T?, T?, RawObject>{ realm in
-            let result: T? = try! self._run(realm) as! T
+    public func subscribe_opt_with_write_permission(_ onNext: @escaping (Realm, T) -> ()) -> RealmRW<T, T, RawObject> {
+        return RealmRW<T, T, RawObject>{ realm in
+            let result: T = try! self._run(realm) as! T
             onNext(realm, result)
             return result
         }
