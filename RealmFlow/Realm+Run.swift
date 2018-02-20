@@ -27,7 +27,7 @@ public extension Realm {
     /// - Returns: realm operation result.
     /// - Throws: `Realm.Error` or error thrown by user.
     @discardableResult
-    public func run<T>(flow: RealmWO<T>) throws -> T {
+    public func run<T, ROW>(flow: RealmWO<T, ROW>) throws -> T {
         return try writeAndReturn { try flow._run(self) }
     }
     

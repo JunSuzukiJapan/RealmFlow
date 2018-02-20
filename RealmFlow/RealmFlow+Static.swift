@@ -22,24 +22,24 @@ public extension Realm.Flow {
     ///
     /// - Parameter object: The object to be added to this Realm.
     /// - Returns: `WriteOnly` operation
-    public static func add(_ object: Object) -> RealmWO<Void> {
-        return RealmWO<Void> { realm in realm.add(object) }
+    public static func add<ROW: RawOrWrap>(_ object: Object) -> RealmWO<Void, ROW> {
+        return RealmWO<Void, ROW> { realm in realm.add(object) }
     }
 
     /// Deletes object in the Realm.
     ///
     /// - Parameter object: The object to be removed to this Realm.
     /// - Returns: `WriteOnly` operation
-    public func delete(_ object: Object) -> RealmWO<Void> {
-        return RealmWO<Void> { realm in realm.delete(object) }
+    public func delete<ROW: RawOrWrap>(_ object: Object) -> RealmWO<Void, ROW> {
+        return RealmWO<Void, ROW> { realm in realm.delete(object) }
     }
 
     /// Deletes object in the Realm.
     ///
     /// - Parameter object: The object to be removed to this Realm.
     /// - Returns: `WriteOnly` operation
-    public static func deleteAll() -> RealmWO<Void> {
-        return RealmWO<Void> { realm in realm.deleteAll() }
+    public static func deleteAll<ROW: RawOrWrap>() -> RealmWO<Void, ROW> {
+        return RealmWO<Void, ROW> { realm in realm.deleteAll() }
     }
 }
 
