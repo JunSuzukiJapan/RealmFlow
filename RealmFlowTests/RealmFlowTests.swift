@@ -12,22 +12,68 @@ import RealmSwift
 
 class Dog : Object {
     @objc dynamic var name: String = ""
+    
+    override static func primaryKey() -> String? {
+        return "name"
+    }
+
+    override static func indexedProperties() -> [String] {
+        return ["name"]
+    }
 }
 
 class Cat : Object {
     @objc dynamic var name: String = ""
+    
+    override static func primaryKey() -> String? {
+        return "name"
+    }
+
+    override static func indexedProperties() -> [String] {
+        return ["name"]
+    }
 }
 
 class RealmFlowTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+        Realm.Configuration.defaultConfiguration = config
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testPrimaryKey(){
+        let pochi = Dog()
+        pochi.name = "Pochi"
+        let hachi = Dog()
+        hachi.name = "Hachi"
+        
+        let flow = Realm.Flow.deleteAll()
+            .add(pochi)
+            .add(hachi)
+            .object(ofType: Dog.self, forPrimaryKey: "Pochi")
+            .subscribe_opt { result in
+                XCTAssertNotNil(result as Any)
+                if let dog = result {
+                    XCTAssertEqual(dog?.name, "Pochi")
+                }
+            }
+            .object(ofType: Dog.self, forPrimaryKey: "Hachi")
+            .subscribe_opt { result in
+                XCTAssertNotNil(result as Any)
+                if let dog = result {
+                    XCTAssertEqual(dog?.name, "Hachi")
+                }
+            }
+
+        let realm = try! Realm()
+        let _ = try? realm.run(flow: flow)
     }
 
     func testAddAndQuery(){

@@ -31,7 +31,7 @@ public typealias RealmRW<T, U, ROW: RawOrWrap> = RealmFlow<ReadWrite, T, U, ROW>
 
 /// Alias of `RealmFlow<WriteOnly, T>`
 public typealias RealmWrite<T, ROW: RawOrWrap> = RealmFlow<WriteOnly, T, T, ROW>
-public typealias RealmWO<T> = RealmFlow<WriteOnly, T, T, Raw>
+public typealias RealmWO<T> = RealmFlow<WriteOnly, T, T, RawResults>
 
 //
 // abstract class SequenceWrapper<T>

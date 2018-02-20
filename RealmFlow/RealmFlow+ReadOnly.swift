@@ -41,8 +41,8 @@ public extension RealmFlow where RW: ReadOnly {
     /// - Parameter type: The type of the object to be returned.
     /// - Parameter key:  The primary key of the desired object.
     /// - Returns: `ReadOnly` operation
-    public func object<T: Object, K>(ofType type: T.Type, forPrimaryKey key: K) -> RealmRO<T?, T?, Raw> {
-        return RealmRO<T?, T?, Raw> { realm in
+    public func object<T: Object, K>(ofType type: T.Type, forPrimaryKey key: K) -> RealmRO<T?, T?, RawObject> {
+        return RealmRO<T?, T?, RawObject> { realm in
             let _ = try! self._run(realm)
             return realm.object(ofType: type, forPrimaryKey: key)
         }
@@ -51,19 +51,19 @@ public extension RealmFlow where RW: ReadOnly {
 
 //
 //  RealmFlow
-//    where ReadOrWrapper = Raw
+//    where ReadOrWrapper = Raw, U = Results<T>
 //
-public extension RealmFlow where RW: ReadOnly, T: Object, U: Results<T>, ROW: Raw {
-    public func subscribe(onNext: @escaping (Results<T>) -> ()) -> RealmRO<T, Results<T>, Raw> {
-        return RealmRO<T, Results<T>, Raw>{ realm in
+public extension RealmFlow where RW: ReadOnly, T: Object, U: Results<T>, ROW: RawResults {
+    public func subscribe(onNext: @escaping (Results<T>) -> ()) -> RealmRO<T, Results<T>, RawResults> {
+        return RealmRO<T, Results<T>, RawResults>{ realm in
             let results = try! self._run(realm)
             onNext(results)
             return results
         }
     }
     
-    public func subscribe_with_write_permission(onNext: @escaping (Realm, Results<T>) -> ()) -> RealmRW<T, Results<T>, Raw> {
-        return RealmRW<T, Results<T>, Raw>{ realm in
+    public func subscribe_with_write_permission(onNext: @escaping (Realm, Results<T>) -> ()) -> RealmRW<T, Results<T>, RawResults> {
+        return RealmRW<T, Results<T>, RawResults>{ realm in
             let results = try! self._run(realm)
             onNext(realm, results)
             return results
@@ -157,4 +157,27 @@ public extension RealmFlow where RW: ReadOnly, T: Object, U: SequenceWrapper<T>,
      }
      */
 }
+
+//
+//  RealmFlow
+//    where ReadOrWrapper = RawObject, U = T?
+//
+public extension RealmFlow where RW: ReadOnly, ROW: RawObject {
+    public func subscribe_opt(onNext: @escaping (T?) -> ()) -> RealmRO<T?, T?, RawObject> {
+        return RealmRO<T?, T?, RawObject>{ realm in
+            let result: T? = try! self._run(realm) as! T
+            onNext(result)
+            return result
+        }
+    }
+    
+    public func subscribe_opt_with_write_permission(onNext: @escaping (Realm, T?) -> ()) -> RealmRW<T?, T?, RawObject> {
+        return RealmRW<T?, T?, RawObject>{ realm in
+            let result: T? = try! self._run(realm) as! T
+            onNext(realm, result)
+            return result
+        }
+    }
+}
+
 

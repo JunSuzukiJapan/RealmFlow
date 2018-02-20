@@ -41,8 +41,8 @@ public extension RealmFlow where RW: WriteOnly {
     /// - Parameter type: The type of the object to be returned.
     /// - Parameter key:  The primary key of the desired object.
     /// - Returns: `ReadWrite` operation
-    public func object<T: Object, K>(ofType type: T.Type, forPrimaryKey key: K) -> RealmRW<T?, T?, Raw> {
-        return RealmRW<T?, T?, Raw> { realm in
+    public func object<T: Object, K>(ofType type: T.Type, forPrimaryKey key: K) -> RealmRW<T?, T?, RawObject> {
+        return RealmRW<T?, T?, RawObject> { realm in
             let _ = try! self._run(realm)
             return realm.object(ofType: type, forPrimaryKey: key)
         }
@@ -60,7 +60,15 @@ public extension RealmFlow where RW: WriteOnly, T: Object {
     public func subscribe_with_write_permission(onNext: @escaping (Realm, Results<T>) -> ()) throws -> RealmWO<T> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
     }
+
+    public func subscribe_opt(onNext: @escaping (T?) -> ()) throws -> RealmRO<T?, T?, RawObject> {
+        throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
+    }
     
+    public func subscribe_opt_with_write_permission(onNext: @escaping (Realm, T?) -> ()) throws -> RealmRW<T?, T?, RawObject> {
+        throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
+    }
+
     public func sorted(_ by: @escaping (T, T) throws -> Bool) throws -> RealmRW<T, SequenceWrapper<T>, Wrap> {
         throw NSError(domain: "call sorted with no data", code: -1, userInfo: nil)
     }
@@ -69,4 +77,3 @@ public extension RealmFlow where RW: WriteOnly, T: Object {
         throw NSError(domain: "call filter with no data", code: -1, userInfo: nil)
     }
 }
-

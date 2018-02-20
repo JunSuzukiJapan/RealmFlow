@@ -71,8 +71,8 @@ public extension Realm.Flow {
     /// - Parameter type: The type of the object to be returned.
     /// - Parameter key:  The primary key of the desired object.
     /// - Returns: `ReadOnly` operation
-    public static func object<T: Object, K>(ofType type: T.Type, forPrimaryKey key: K) -> RealmRO<T?, T?, Raw> {
-        return RealmRO<T?, T?, Raw> { realm in
+    public static func object<T: Object, K>(ofType type: T.Type, forPrimaryKey key: K) -> RealmRO<T?, T?, RawObject> {
+        return RealmRO<T?, T?, RawObject> { realm in
             return realm.object(ofType: type, forPrimaryKey: key)
         }
     }
