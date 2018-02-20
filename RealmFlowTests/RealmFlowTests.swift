@@ -41,11 +41,24 @@ class RealmFlowTests: XCTestCase {
 
         let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
         Realm.Configuration.defaultConfiguration = config
+        
+        let flow = Realm.Flow.deleteAll()
+        let realm = try! Realm()
+        let _ = try? realm.run(flow: flow)
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testAdd(){
+        let pochi = Dog()
+        pochi.name = "Pochi"
+
+        let flow = Realm.Flow.add(pochi)
+        let realm = try! Realm()
+        let _ = try? realm.run(flow: flow)
     }
     
     func testPrimaryKey(){
@@ -54,7 +67,7 @@ class RealmFlowTests: XCTestCase {
         let hachi = Dog()
         hachi.name = "Hachi"
         
-        let flow = Realm.Flow.deleteAll()
+        let flow = Realm.Flow
             .add(pochi)
             .add(hachi)
             .object(ofType: Dog.self, forPrimaryKey: "Pochi")
@@ -84,7 +97,7 @@ class RealmFlowTests: XCTestCase {
         let hachi = Dog()
         hachi.name = "Hachi"
         
-        var flow = Realm.Flow.deleteAll()
+        var flow = Realm.Flow
             .add(tama)
             .add(pochi)
         let flow2 = Realm.Flow.add(hachi)
@@ -105,7 +118,7 @@ class RealmFlowTests: XCTestCase {
         XCTAssertEqual(results2.first?.name, "Tama")
     }
 
-    func testManyFlow() {
+    func testComplexFlow() {
         let pochi = Dog()
         pochi.name = "Pochi"
         let tama = Cat()
