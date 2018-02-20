@@ -61,6 +61,51 @@ class RealmFlowTests: XCTestCase {
         let _ = try? realm.run(flow: flow)
     }
     
+    func testObjects(){
+        let pochi = Dog()
+        pochi.name = "Pochi"
+        
+        let flow = Realm.Flow.add(pochi)
+        let realm = try! Realm()
+        let _ = try? realm.run(flow: flow)
+
+        let query = Realm.Flow.objects(Dog.self)
+            .subscribe { results in
+                XCTAssertEqual(results.count, 1)
+                XCTAssertEqual(results.first?.name, "Pochi")
+            }
+        let _ = try? realm.run(flow: query)
+    }
+    
+    func testFileterAndSorted(){
+        let pochi = Dog()
+        pochi.name = "Pochi"
+        let hachi = Dog()
+        hachi.name = "Hachi"
+        let taro = Dog()
+        taro.name = "Taro"
+        let jiro = Dog()
+        jiro.name = "Jiro"
+        
+        let flow = Realm.Flow
+            .add(pochi)
+            .add(hachi)
+            .add(taro)
+            .add(jiro)
+            .objects(Dog.self)
+            .filter {$0.name.contains("ro")}
+            .sorted {$0.name < $1.name}
+            .subscribe { results in
+                XCTAssertEqual(results.count, 2)
+                let iter = results.makeIterator()
+                XCTAssertEqual(iter.next()?.name, "Jiro")
+                XCTAssertEqual(iter.next()?.name, "Taro")
+            }
+
+        let realm = try! Realm()
+        let _ = try? realm.run(flow: flow)
+    }
+    
     func testPrimaryKey(){
         let pochi = Dog()
         pochi.name = "Pochi"
