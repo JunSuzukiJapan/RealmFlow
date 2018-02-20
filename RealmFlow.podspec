@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   - Run Realm operation with `realm.run(flow:)`.
 
 RealmFlow call ```realm.beginTransaction()``` automatically, if needed.
-So you don't need to think about transaction
+So you don't need to think about transaction.
 
 example:
 

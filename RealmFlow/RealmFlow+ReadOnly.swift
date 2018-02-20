@@ -18,8 +18,8 @@ public extension RealmFlow where RW: ReadOnly {
     ///
     /// - Parameter type: The type of the objects to be returned.
     /// - Returns: `ReadWrite` operation
-    public func objects<T: Object, Raw>(_ type: T.Type) -> RealmRO<T, Results<T>, Raw> {
-        return RealmRO<T, Results<T>, Raw> { realm in
+    public func objects<T: Object>(_ type: T.Type) -> RealmRO<T, Results<T>, RawResults> {
+        return RealmRO<T, Results<T>, RawResults> { realm in
             let _ = try! self._run(realm)
             return realm.objects(type)
         }

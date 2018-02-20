@@ -50,8 +50,8 @@ public extension Realm.Flow {
     ///
     /// - Parameter type: The type of the objects to be returned.
     /// - Returns: `ReadOnly` operation
-    public static func objects<T: Object, Raw>(_ type: T.Type) -> RealmRO<T, Results<T>, Raw> {
-        return RealmRO<T, Results<T>, Raw> { realm in
+    public static func objects<T: Object>(_ type: T.Type) -> RealmRO<T, Results<T>, RawResults> {
+        return RealmRO<T, Results<T>, RawResults> { realm in
             return realm.objects(type)
         }
     }
