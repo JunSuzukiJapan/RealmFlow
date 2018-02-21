@@ -54,22 +54,32 @@ public extension RealmFlow where RW: ReadOnly {
 //    where ReadOrWrapper = Raw, U = Results<T>
 //
 public extension RealmFlow where RW: ReadOnly, T: Object, U: Results<T>, ROW: RawResults {
-    public func subscribe(_ onNext: @escaping (Results<T>) -> ()) -> RealmRO<T, Results<T>, RawResults> {
+
+    /// Receive and process the latest data.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe(_ processor: @escaping (Results<T>) -> ()) -> RealmRO<T, Results<T>, RawResults> {
         return RealmRO<T, Results<T>, RawResults>{ realm in
             let results = try! self._run(realm)
-            onNext(results)
+            processor(results)
             return results
         }
     }
     
-    public func subscribe_with_write_permission(_ onNext: @escaping (Realm, Results<T>) -> ()) -> RealmRW<T, Results<T>, RawResults> {
+    /// Receive and process the latest data with write permission.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe_with_write_permission(_ processor: @escaping (Realm, Results<T>) -> ()) -> RealmRW<T, Results<T>, RawResults> {
         return RealmRW<T, Results<T>, RawResults>{ realm in
             let results = try! self._run(realm)
-            onNext(realm, results)
+            processor(realm, results)
             return results
         }
     }
-    
+
+    /// Receive and sort the latest data.
+    ///
+    /// - Parameter by: The method for comparing two objects.
     public func sorted(_ by: @escaping (T, T) throws -> Bool) -> RealmRO<T, SequenceWrapper<T>, Wrap> {
         return RealmRO<T, SequenceWrapper<T>, Wrap> { realm in
             let results: [T] = try! self._run(realm).sorted(by: by)
@@ -94,6 +104,9 @@ public extension RealmFlow where RW: ReadOnly, T: Object, U: Results<T>, ROW: Ra
      }
      */
     
+    /// Receive and filter the latest data.
+    ///
+    /// - Parameter predicate: The method for filtering object.
     public func filter(_ predicate: @escaping (T) -> Bool) -> RealmRO<T, SequenceWrapper<T>, Wrap> {
         return RealmRO<T, SequenceWrapper<T>, Wrap> { realm in
             let results = try! self._run(realm).filter { predicate($0) }
@@ -117,22 +130,32 @@ public extension RealmFlow where RW: ReadOnly, T: Object, U: Results<T>, ROW: Ra
 //    where ReadOrWrapper = Wrapper
 //
 public extension RealmFlow where RW: ReadOnly, T: Object, U: SequenceWrapper<T>, ROW: Wrap {
-    public func subscribe(_ onNext: @escaping (SequenceWrapper<T>) -> ()) -> RealmRO<T, SequenceWrapper<T>, Wrap> {
+
+    /// Receive and process the latest data.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe(_ processor: @escaping (SequenceWrapper<T>) -> ()) -> RealmRO<T, SequenceWrapper<T>, Wrap> {
         return RealmRO<T, SequenceWrapper<T>, Wrap>{ realm in
             let results = try! self._run(realm)
-            onNext(results)
+            processor(results)
             return results
         }
     }
     
-    public func subscribe_with_write_permission(_ onNext: @escaping (Realm, SequenceWrapper<T>) -> ()) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
+    /// Receive and process the latest data with write permission.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe_with_write_permission(_ processor: @escaping (Realm, SequenceWrapper<T>) -> ()) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
         return RealmRW<T, SequenceWrapper<T>, Wrap>{ realm in
             let results = try! self._run(realm)
-            onNext(realm, results)
+            processor(realm, results)
             return results
         }
     }
     
+    /// Receive and sort the latest data.
+    ///
+    /// - Parameter by: The method for comparing two objects.
     public func sorted(_ by: @escaping (T, T) throws -> Bool) -> RealmRO<T, SequenceWrapper<T>, Wrap> {
         return RealmRO<T, SequenceWrapper<T>, Wrap> { realm in
             let results: [T] = try! self._run(realm).sorted(by: by)
@@ -140,6 +163,9 @@ public extension RealmFlow where RW: ReadOnly, T: Object, U: SequenceWrapper<T>,
         }
     }
     
+    /// Receive and filter the latest data.
+    ///
+    /// - Parameter predicate: The method for filtering object.
     public func filter(_ predicate: @escaping (T) -> Bool) -> RealmRO<T, SequenceWrapper<T>, Wrap> {
         return RealmRO<T, SequenceWrapper<T>, Wrap> { realm in
             let results: [T] = try! self._run(realm).filter { predicate($0) }
@@ -163,18 +189,25 @@ public extension RealmFlow where RW: ReadOnly, T: Object, U: SequenceWrapper<T>,
 //    where ReadOrWrapper = RawObject
 //
 public extension RealmFlow where RW: ReadOnly, ROW: RawObject {
-    public func subscribe_opt(_ onNext: @escaping (T) -> ()) -> RealmRO<T, T, RawObject> {
+
+    /// Receive and process the latest data.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe_opt(_ processor: @escaping (T) -> ()) -> RealmRO<T, T, RawObject> {
         return RealmRO<T, T, RawObject>{ realm in
             let result: T = try! self._run(realm) as! T
-            onNext(result)
+            processor(result)
             return result
         }
     }
     
-    public func subscribe_opt_with_write_permission(_ onNext: @escaping (Realm, T) -> ()) -> RealmRW<T, T, RawObject> {
+    /// Receive and process the latest data with write permission.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe_opt_with_write_permission(_ processor: @escaping (Realm, T) -> ()) -> RealmRW<T, T, RawObject> {
         return RealmRW<T, T, RawObject>{ realm in
             let result: T = try! self._run(realm) as! T
-            onNext(realm, result)
+            processor(realm, result)
             return result
         }
     }

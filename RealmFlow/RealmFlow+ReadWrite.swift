@@ -50,22 +50,32 @@ public extension RealmFlow where RW: ReadWrite {
 //    where ReadOrWrapper = RawResults
 //
 public extension RealmFlow where RW: ReadWrite, T: Object, U: Results<T>, ROW: RawResults {
-    public func subscribe(onNext: @escaping (Results<T>) -> ()) -> RealmRW<T, Results<T>, RawResults> {
+
+    /// Receive and process the latest data.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe(_ processor: @escaping (Results<T>) -> ()) -> RealmRW<T, Results<T>, RawResults> {
         return RealmRW<T, Results<T>, RawResults>{ realm in
             let results = try! self._run(realm)
-            onNext(results)
+            processor(results)
             return results
         }
     }
     
-    public func subscribe_with_write_permission(onNext: @escaping (Realm, Results<T>) -> ()) -> RealmRW<T, Results<T>, RawResults> {
+    /// Receive and process the latest data with write permission.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe_with_write_permission(_ processor: @escaping (Realm, Results<T>) -> ()) -> RealmRW<T, Results<T>, RawResults> {
         return RealmRW<T, Results<T>, RawResults>{ realm in
             let results = try! self._run(realm)
-            onNext(realm, results)
+            processor(realm, results)
             return results
         }
     }
     
+    /// Receive and sort the latest data.
+    ///
+    /// - Parameter by: The method for comparing two objects.
     public func sorted(_ by: @escaping (T, T) throws -> Bool) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
         return RealmRW<T, SequenceWrapper<T>, Wrap> { realm in
             let results: [T] = try! self._run(realm).sorted(by: by)
@@ -73,6 +83,9 @@ public extension RealmFlow where RW: ReadWrite, T: Object, U: Results<T>, ROW: R
         }
     }
     
+    /// Receive and filter the latest data.
+    ///
+    /// - Parameter predicate: The method for filtering object.
     public func filter(_ predicate: @escaping (T) -> Bool) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
         return RealmRW<T, SequenceWrapper<T>, Wrap> { realm in
             let results = try! self._run(realm).filter { predicate($0) }
@@ -86,22 +99,32 @@ public extension RealmFlow where RW: ReadWrite, T: Object, U: Results<T>, ROW: R
 //    where ReadOrWrapper = Wrapper
 //
 public extension RealmFlow where RW: ReadWrite, T: Object, U: SequenceWrapper<T>, ROW: Wrap {
-    public func subscribe(onNext: @escaping (SequenceWrapper<T>) -> ()) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
+
+    /// Receive and process the latest data.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe(_ processor: @escaping (SequenceWrapper<T>) -> ()) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
         return RealmRW<T, SequenceWrapper<T>, Wrap>{ realm in
             let results = try! self._run(realm)
-            onNext(results)
+            processor(results)
             return results
         }
     }
     
-    public func subscribe_with_write_permission(onNext: @escaping (Realm, SequenceWrapper<T>) -> ()) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
+    /// Receive and process the latest data with write permission.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe_with_write_permission(_ processor: @escaping (Realm, SequenceWrapper<T>) -> ()) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
         return RealmRW<T, SequenceWrapper<T>, Wrap>{ realm in
             let results = try! self._run(realm)
-            onNext(realm, results)
+            processor(realm, results)
             return results
         }
     }
     
+    /// Receive and sort the latest data.
+    ///
+    /// - Parameter by: The method for comparing two objects.
     public func sorted(_ by: @escaping (T, T) throws -> Bool) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
         return RealmRW<T, SequenceWrapper<T>, Wrap> { realm in
             let results: [T] = try! self._run(realm).sorted(by: by)
@@ -109,6 +132,9 @@ public extension RealmFlow where RW: ReadWrite, T: Object, U: SequenceWrapper<T>
         }
     }
     
+    /// Receive and filter the latest data.
+    ///
+    /// - Parameter predicate: The method for filtering object.
     public func filter(_ predicate: @escaping (T) -> Bool) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
         return RealmRW<T, SequenceWrapper<T>, Wrap> { realm in
             let results: [T] = try! self._run(realm).filter { predicate($0) }
@@ -126,34 +152,47 @@ public extension RealmFlow where RW: ReadWrite, ROW: RawObject {
     // メモ： subscribe() だと、RawResultsなのかRawObjectなのか、
     // コンパイラがうまく判断してくれないようなので、
     // 諦めて別名のメソッドにした。
-    public func subscribe_opt(_ onNext: @escaping (T) -> ()) -> RealmRW<T, T, RawObject> {
+
+    /// Receive and process the latest data.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe_opt(_ processor: @escaping (T) -> ()) -> RealmRW<T, T, RawObject> {
         return RealmRW<T, T, RawObject>{ realm in
             let result: T = try! self._run(realm) as! T
-            onNext(result)
+            processor(result)
             return result
         }
     }
     
-    public func subscribe_opt_with_write_permission(_ onNext: @escaping (Realm, T) -> ()) -> RealmRW<T, T, RawObject> {
+    /// Receive and process the latest data with write permission.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe_opt_with_write_permission(_ processor: @escaping (Realm, T) -> ()) -> RealmRW<T, T, RawObject> {
         return RealmRW<T, T, RawObject>{ realm in
             let result: T = try! self._run(realm) as! T
-            onNext(realm, result)
+            processor(realm, result)
             return result
         }
     }
     
-    public func subscribe(_ onNext: @escaping (T) -> ()) -> RealmRW<T, T, RawObject> {
+    /// Receive and process the latest data.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe(_ processor: @escaping (T) -> ()) -> RealmRW<T, T, RawObject> {
         return RealmRW<T, T, RawObject>{ realm in
             let result: T = try! self._run(realm) as! T
-            onNext(result)
+            processor(result)
             return result
         }
     }
     
-    public func subscribe_with_write_permission(_ onNext: @escaping (Realm, T) -> ()) -> RealmRW<T, T, RawObject> {
+    /// Receive and process the latest data with write permission.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe_with_write_permission(_ processor: @escaping (Realm, T) -> ()) -> RealmRW<T, T, RawObject> {
         return RealmRW<T, T, RawObject>{ realm in
             let result: T = try! self._run(realm) as! T
-            onNext(realm, result)
+            processor(realm, result)
             return result
         }
     }
@@ -164,23 +203,17 @@ public extension RealmFlow where RW: ReadWrite, ROW: RawObject {
 //    where ReadOrWrapper = NoObject
 //
 public extension RealmFlow where RW: ReadWrite, ROW: NoObject {
-    public func subscribe(_ onNext: @escaping () -> ()) throws -> RealmRW<T, Void, NoObject> {
+    /// Receive and process the latest data.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe(_ processor: @escaping () -> ()) throws -> RealmRW<T, Void, NoObject> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
-        /*
-        return RealmRW<T, Void, NoObject>{ realm in
-            _ = try! self._run(realm)
-            onNext()
-        }
-        */
     }
     
-    public func subscribe_with_write_permission(_ onNext: @escaping (Realm) -> ()) throws -> RealmRW<T, Void, NoObject> {
+    /// Receive and process the latest data with write permission.
+    ///
+    /// - Parameter processor: The method for processing result.
+    public func subscribe_with_write_permission(_ Processor: @escaping (Realm) -> ()) throws -> RealmRW<T, Void, NoObject> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
-        /*
-        return RealmRW<T, Void, NoObject>{ realm in
-            _ = try! self._run(realm)
-            onNext(realm)
-        }
-        */
     }
 }
