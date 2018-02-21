@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RealmFlow'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'RealmFlow makes Realm operation more easy.'
 
   s.description      = <<-DESC
