@@ -31,3 +31,6 @@ Podfile.lock
 # Carthage
 Carthage/Checkouts
 Carthage/Build
+
+# Doc
+jazzy_doc/

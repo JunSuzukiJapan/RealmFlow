@@ -84,7 +84,7 @@ github "JunSuzukiJapan/RealmFlow"
 ## CocoaPods
 
 ```Podfile
-pod 'RealmFlow', '~> 0.1'
+pod 'RealmFlow', '~> 0.3'
 ```
 
 # CRUD Example codes
