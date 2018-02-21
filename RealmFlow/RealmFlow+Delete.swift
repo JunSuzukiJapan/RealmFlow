@@ -14,8 +14,8 @@ public extension RealmFlow where RW: WriteOnly {
     ///
     /// - Parameter object: The object to be removed to this Realm.
     /// - Returns: `WriteOnly` operation
-    public func delete(_ object: Object) -> RealmWO<Void, ROW> {
-        return RealmWO<Void, ROW> { realm in
+    public func delete(_ object: Object) -> RealmWO<Void> {
+        return RealmWO<Void> { realm in
             let _ = try self._run(realm)
             realm.delete(object)
         }
@@ -24,8 +24,8 @@ public extension RealmFlow where RW: WriteOnly {
     /// Delete all objects in the Realm.
     ///
     /// - Returns: `WriteOnly` operation
-    public func deleteAll() -> RealmWO<Void, ROW> {
-        return RealmWO<Void, ROW> { realm in
+    public func deleteAll() -> RealmWO<Void> {
+        return RealmWO<Void> { realm in
             let _ = try self._run(realm)
             realm.deleteAll()
         }

@@ -23,3 +23,8 @@ public class Wrap : RawOrWrap { }
 /// It represents that results type is wrapped T.
 public class RawObject : RawOrWrap { }
 
+// MARK: - NoObject
+/// `NoObject` is used as `RawOrWrap` type parameter of `RealmFlow<RO, T, U, RawOrWrap>`
+/// It represents that results type is Void.
+public class NoObject : RawOrWrap { }
+

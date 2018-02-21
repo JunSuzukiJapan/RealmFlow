@@ -14,8 +14,8 @@ public extension RealmFlow where RW: WriteOnly {
     ///
     /// - Parameter object: The object to be added to this Realm.
     /// - Returns: `WriteOnly` operation
-    public func add(_ object: Object) -> RealmWO<Void, ROW> {
-        return RealmWO<Void, ROW> { realm in
+    public func add(_ object: Object) -> RealmWO<Void> {
+        return RealmWO<Void> { realm in
             let _ = try self._run(realm)
             realm.add(object)
         }

@@ -158,3 +158,29 @@ public extension RealmFlow where RW: ReadWrite, ROW: RawObject {
         }
     }
 }
+
+//
+//  RealmFlow
+//    where ReadOrWrapper = NoObject
+//
+public extension RealmFlow where RW: ReadWrite, ROW: NoObject {
+    public func subscribe(_ onNext: @escaping () -> ()) throws -> RealmRW<T, Void, NoObject> {
+        throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
+        /*
+        return RealmRW<T, Void, NoObject>{ realm in
+            _ = try! self._run(realm)
+            onNext()
+        }
+        */
+    }
+    
+    public func subscribe_with_write_permission(_ onNext: @escaping (Realm) -> ()) throws -> RealmRW<T, Void, NoObject> {
+        throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
+        /*
+        return RealmRW<T, Void, NoObject>{ realm in
+            _ = try! self._run(realm)
+            onNext(realm)
+        }
+        */
+    }
+}

@@ -50,17 +50,73 @@ public extension RealmFlow where RW: WriteOnly {
 }
 
 // WriteOnly時には,subscribeするものがないので、subscribeなどの呼び出しはエラーになる。
-//    subscribe, sorted, filterの３つのメソッドをここで定義しておかないと、
-//    ReadOnly & ReadWrite時に呼び出す時に、どのメソッドを使うのかの推論がうまくいかないようだ。
-public extension RealmFlow where RW: WriteOnly, T: Object {
-    public func subscribe(_ onNext: @escaping (Results<T>) -> ()) throws -> RealmWO<T, ROW> {
+public extension RealmFlow where RW: WriteOnly, ROW: NoObject {
+    public func subscribe(_ onNext: @escaping () -> ()) throws -> RealmRO<Void, Void, NoObject> {
+        throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
+        /*
+        return RealmRO<Void, Void, NoObject>{ realm in
+            let _ = try! self._run(realm)
+            onNext()
+        }
+        */
+    }
+    
+    public func subscribe_with_write_permission(_ onNext: @escaping (Realm) -> ()) throws -> RealmRW<Void, Void, NoObject> {
+        throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
+        /*
+        return RealmRW<Void, Void, NoObject>{ realm in
+            let _ = try! self._run(realm)
+            onNext(realm)
+        }
+        */
+    }
+    
+    public func sorted(_ by: @escaping (T, T) throws -> Bool) throws -> RealmRO<T, SequenceWrapper<T>, Wrap> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
     }
     
-    public func subscribe_with_write_permission(_ onNext: @escaping (Realm, Results<T>) -> ()) throws -> RealmWO<T, ROW> {
+    public func filter(_ predicate: @escaping (T) -> Bool) throws -> RealmRO<T, SequenceWrapper<T>, Wrap> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
     }
+}
 
+//
+//  RealmFlow
+//    where ReadOrWrapper = Wrapper
+//
+public extension RealmFlow where RW: WriteOnly, T: Object, U: SequenceWrapper<T>, ROW: Wrap {
+    public func subscribe(_ onNext: @escaping (SequenceWrapper<T>) -> ()) -> RealmRO<T, SequenceWrapper<T>, Wrap> {
+        //        throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
+        return RealmRO<T, SequenceWrapper<T>, Wrap>{ realm in
+            let results = try! self._run(realm)
+            onNext(results)
+            return results
+        }
+    }
+    
+    public func subscribe_with_write_permission(_ onNext: @escaping (Realm, SequenceWrapper<T>) -> ()) -> RealmRW<T, SequenceWrapper<T>, Wrap> {
+        //        throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
+        return RealmRW<T, SequenceWrapper<T>, Wrap>{ realm in
+            let results = try! self._run(realm)
+            onNext(realm, results)
+            return results
+        }
+    }
+    
+    public func sorted(_ by: @escaping (T, T) throws -> Bool) throws -> RealmRO<T, SequenceWrapper<T>, Wrap> {
+        throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
+    }
+    
+    public func filter(_ predicate: @escaping (T) -> Bool) throws -> RealmRO<T, SequenceWrapper<T>, Wrap> {
+        throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
+    }
+}
+
+//
+//  RealmFlow
+//    where ReadOrWrapper = RawObject
+//
+public extension RealmFlow where RW: WriteOnly, ROW: RawObject {
     public func subscribe_opt(_ onNext: @escaping (T) -> ()) throws -> RealmRO<T, T, RawObject> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
     }
@@ -68,12 +124,5 @@ public extension RealmFlow where RW: WriteOnly, T: Object {
     public func subscribe_opt_with_write_permission(_ onNext: @escaping (Realm, T) -> ()) throws -> RealmRW<T, T, RawObject> {
         throw NSError(domain: "call subscribe with no data", code: -1, userInfo: nil)
     }
-
-    public func sorted(_ by: @escaping (T, T) throws -> Bool) throws -> RealmRW<T, SequenceWrapper<T>, Wrap> {
-        throw NSError(domain: "call sorted with no data", code: -1, userInfo: nil)
-    }
-    
-    public func filter(_ predicate: @escaping (T) -> Bool) throws -> RealmRW<T, SequenceWrapper<T>, Wrap> {
-        throw NSError(domain: "call filter with no data", code: -1, userInfo: nil)
-    }
 }
+

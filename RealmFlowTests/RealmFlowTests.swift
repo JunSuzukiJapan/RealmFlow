@@ -191,6 +191,78 @@ class RealmFlowTests: XCTestCase {
         let _ = try! realm.run(flow: testFlow)
     }
 
+    /*
+    func testCannotUpdate(){
+        let tama = Cat()
+        tama.id = "cat1"
+        tama.name = "Tama"
+        
+        let addFlow = Realm.Flow
+            .add(tama)
+        
+        let updateFlow = Realm.Flow
+            .object(ofType: Cat.self, forPrimaryKey: "cat1")
+            .subscribe_opt { result in
+                result!.name = "Buchi"
+            }
+        
+        let realm = try! Realm()
+        let _ = try! realm.run(flow: addFlow)
+        //XCTAssertThrowsError( try realm.run(flow: updateFlow) ) // why do not catch error?
+    }
+    */
+    
+    // ビルドできればOK
+    func testCombine(){
+        let pochi = Dog()
+        pochi.name = "Pochi"
+        let tama = Cat()
+        tama.id = "cat1"
+        tama.name = "Tama"
+
+        let readOnlyFlow = Realm.Flow.objects(Dog.self)
+        let writeOnlyFlow = Realm.Flow.add(pochi)
+        let readWriteFlow = Realm.Flow.add(pochi).objects(Dog.self)
+
+        let combineROandRO = readOnlyFlow.combine(readOnlyFlow)
+        let combineROandWO = readOnlyFlow.combine(writeOnlyFlow)
+        let combineROandRW = readOnlyFlow.combine(readWriteFlow)
+        
+        let combineWOandRO = writeOnlyFlow.combine(readOnlyFlow)
+        let combineWOandWO = writeOnlyFlow.combine(writeOnlyFlow)
+        let combineWOandRW = writeOnlyFlow.combine(readWriteFlow)
+        
+        let combineRWandRO = readWriteFlow.combine(readOnlyFlow)
+        let combineRWandWO = readWriteFlow.combine(writeOnlyFlow)
+        let combineRWandRW = readWriteFlow.combine(readWriteFlow)
+
+        let RO2 = Realm.Flow.objects(Cat.self)
+        let WO2 = Realm.Flow.add(tama)
+        let RW2 = Realm.Flow.add(tama).objects(Cat.self)
+        
+        let _ = readOnlyFlow.combine(RO2)
+        let _ = readOnlyFlow.combine(WO2)
+        let _ = readOnlyFlow.combine(RW2)
+        let _ = writeOnlyFlow.combine(WO2)
+        let _ = writeOnlyFlow.combine(RO2)
+        let _ = writeOnlyFlow.combine(RW2)
+        let _ = readWriteFlow.combine(RW2)
+        let _ = readWriteFlow.combine(RO2)
+        let _ = readWriteFlow.combine(WO2)
+        
+        let _ = combineROandRO.subscribe { results in }
+        let _ = try? combineROandWO.subscribe { }
+        let _ = combineROandRW.subscribe { results in }
+
+        let _ = combineWOandRO.subscribe { results in }
+        let _ = try? combineWOandWO.subscribe { }
+        let _ = combineWOandRW.subscribe { results in }
+
+        let _ = combineRWandRO.subscribe { results in }
+        let _ = try? combineRWandWO.subscribe { }
+        let _ = combineRWandRW.subscribe { results in }
+    }
+
     func testComplexFlow() {
         let pochi = Dog()
         pochi.name = "Pochi"
