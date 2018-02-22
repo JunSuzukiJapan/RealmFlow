@@ -178,7 +178,7 @@ class RealmFlowTests: XCTestCase {
                 result!.name = "Buchi"
             }
 
-        let testFlow = Realm.Flow
+        let checkFlow = Realm.Flow
             .objects(Cat.self)
             .subscribe { results in
                 XCTAssertEqual(results.count, 1)
@@ -188,7 +188,7 @@ class RealmFlowTests: XCTestCase {
         let realm = try! Realm()
         let _ = try! realm.run(flow: addFlow)
         let _ = try! realm.run(flow: updateFlow)
-        let _ = try! realm.run(flow: testFlow)
+        let _ = try! realm.run(flow: checkFlow)
     }
 
     /*
@@ -261,6 +261,36 @@ class RealmFlowTests: XCTestCase {
         let _ = combineRWandRO.subscribe { results in }
         let _ = try? combineRWandWO.subscribe { }
         let _ = combineRWandRW.subscribe { results in }
+    }
+    
+    func testDelete(){
+        let tama = Cat()
+        tama.id = "cat1"
+        tama.name = "Tama"
+        
+        let addFlow = Realm.Flow
+            .add(tama)
+            .object(ofType: Cat.self, forPrimaryKey: "cat1")
+            .subscribe_opt { cat_opt in
+                XCTAssertEqual(cat_opt?.name, "Tama")
+            }
+
+        let deleteFlow = Realm.Flow
+            .object(ofType: Cat.self, forPrimaryKey: "cat1")
+            .subscribe_opt_with_write_permission { realm, cat_opt in
+                realm.delete(cat_opt!)
+            }
+        
+        let checkFlow = Realm.Flow
+            .object(ofType: Cat.self, forPrimaryKey: "cat1")
+            .subscribe_opt { cat_opt in
+                XCTAssertTrue(cat_opt == nil)
+            }
+
+        let realm = try! Realm()
+        let _ = try! realm.run(flow: addFlow)
+        let _ = try! realm.run(flow: deleteFlow)
+        let _ = try! realm.run(flow: checkFlow)
     }
 
     func testComplexFlow() {
