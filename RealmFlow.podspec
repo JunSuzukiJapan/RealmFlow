@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RealmFlow'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'RealmFlow makes Realm operation more easy.'
 
   s.description      = <<-DESC
@@ -85,7 +85,7 @@ func do_operations() {
   s.author           = { 'JunSuzukiJapan' => 'jun.suzuki.japan@gmail.com' }
   s.source           = { :git => 'https://github.com/JunSuzukiJapan/RealmFlow.git', :tag => s.version.to_s }
 
-  s.swift_version = '4.0'
+  s.swift_version = '4.1'
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.9'
   s.watchos.deployment_target = '2.0'

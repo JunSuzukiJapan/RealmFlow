@@ -205,8 +205,8 @@ internal class ResultsWrapper<T: Object> : SequenceWrapper<T> {
 }
 
 internal class LazyFilterBidirectionalCollectionWrapper<T: Object> : SequenceWrapper<T> {
-    let _seq: LazyFilterBidirectionalCollection<Results<T>>
-    init(_ seq: LazyFilterBidirectionalCollection<Results<T>>) {
+    let _seq: LazyFilterCollection<Results<T>>
+    init(_ seq: LazyFilterCollection<Results<T>>) {
         _seq = seq
     }
 
@@ -252,7 +252,7 @@ internal class LazyFilterBidirectionalCollectionWrapper<T: Object> : SequenceWra
     public class Iterator : SequenceWrapper<T>._Iterator {
         var iter: LazyFilterIterator<RLMIterator<T>>
         
-        init(_ seq: LazyFilterBidirectionalCollection<Results<T>>) {
+        init(_ seq: LazyFilterCollection<Results<T>>) {
             iter = seq.makeIterator()
         }
         
