@@ -103,11 +103,11 @@ internal class ArrayWrapper<T> : SequenceWrapper<T> {
     }
     
     public override func prefix(_ maxLength: Int) -> AnySequence<T> {
-        return _array.prefix(maxLength)
+        return AnySequence( _array.prefix(maxLength) )
     }
     
     public override func suffix(_ maxLength: Int) -> AnySequence<T> {
-        return _array.suffix(maxLength)
+        return AnySequence( _array.suffix(maxLength) )
     }
     
     public override func forEach(_ body: (T) throws -> Void) rethrows {
@@ -167,11 +167,11 @@ internal class ResultsWrapper<T: Object> : SequenceWrapper<T> {
     }
     
     public override func prefix(_ maxLength: Int) -> AnySequence<T> {
-        return _results.prefix(maxLength)
+        return AnySequence( _results.prefix(maxLength) )
     }
     
     public override func suffix(_ maxLength: Int) -> AnySequence<T> {
-        return _results.suffix(maxLength)
+        return AnySequence( _results.suffix(maxLength) )
     }
     
     public override func forEach(_ body: (T) throws -> Void) rethrows {
@@ -225,11 +225,11 @@ internal class LazyFilterBidirectionalCollectionWrapper<T: Object> : SequenceWra
     }
 
     public override func prefix(_ maxLength: Int) -> AnySequence<T> {
-        return _seq.prefix(maxLength)
+        return AnySequence( _seq.prefix(maxLength) )
     }
     
     public override func suffix(_ maxLength: Int) -> AnySequence<T> {
-        return _seq.suffix(maxLength)
+        return  AnySequence( _seq.suffix(maxLength) )
     }
     
     public override func forEach(_ body: (T) throws -> Void) rethrows {
@@ -283,11 +283,11 @@ internal class LazyMapCollectionWrapper<S: Object, T> : SequenceWrapper<T> {
     }
     
     public override func prefix(_ maxLength: Int) -> AnySequence<T> {
-        return _seq.prefix(maxLength)
+        return AnySequence( _seq.prefix(maxLength) )
     }
     
     public override func suffix(_ maxLength: Int) -> AnySequence<T> {
-        return _seq.suffix(maxLength)
+        return AnySequence( _seq.suffix(maxLength) )
     }
     
     public override func forEach(_ body: (T) throws -> Void) rethrows {
